@@ -138,8 +138,8 @@ const Footer = () => {
                             </ul>
                             <div className='flex flex-col'>
                                 {/* buttons */}
-                                <button className='mb-4 mt-[-30px] h-10'><img width={150} src="/public/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
-                                <button className='h-10'><img width={150} src="/public/google-play-badge-logo-svgrepo-com.svg" /></button>
+                                <button className='mb-4 mt-[-30px] h-10'><img width={150} src="/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
+                                <button className='h-10'><img width={150} src="/google-play-badge-logo-svgrepo-com.svg" /></button>
                             </div>
                         </div>
                     </div>
