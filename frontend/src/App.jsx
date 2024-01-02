@@ -1,15 +1,20 @@
 import React from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
+import {BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import AddRestaurant from './components/AddRestaurant'
+import Error404 from './components/Error404'
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Footer />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/add-restaurants' element={<AddRestaurant />} />
+          <Route path='*' element={<Error404 />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

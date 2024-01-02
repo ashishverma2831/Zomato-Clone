@@ -96,7 +96,6 @@ const Hero = () => {
             <p className="justify-center text-4xl font-normal tracking-wide my-5 flex">Popular locations in <span className='flex uppercase font-semibold'><img className='mx-4' width={50} src='/india-flag-icon.svg'/> India</span> </p>
             <p className='text-2xl max-w-4xl mx-auto text-center text-gray-500 font-light py-5 '>From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.</p>
             <div className=' grid grid-cols-3 gap-6 gap-y-8'>
-
                 {
                     cities.map((city)=>{
                         return (
