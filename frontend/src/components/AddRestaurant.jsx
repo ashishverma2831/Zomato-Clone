@@ -1,9 +1,16 @@
 import React from 'react'
+import HeaderSecond from './HeaderSecond'
+import HeroSecond from './HeroSecond'
+import HeroSecondTwo from './HeroSecondTwo'
+import SliderOne from './SliderOne'
 
 const AddRestaurant = () => {
   return (
     <>
-        Add restaurants
+      <HeaderSecond />
+      <HeroSecond />
+      <HeroSecondTwo />
+      <SliderOne />
     </>
   )
 }
