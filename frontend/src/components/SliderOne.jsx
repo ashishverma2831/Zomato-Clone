@@ -56,11 +56,11 @@ const SliderOne = () => {
 
   return (
     <>
-      <div className=' my-5 p-5'>
-        <div className='max-w-screen-lg mx-auto flex flex-col'>
-          <p className='text-4xl text-center my-5 font-normal'>Our Products</p>
+      <div className=' my-5'>
+        <div className='max-w-screen-lg mx-auto flex flex-col '>
+          <p className='text-4xl text-center mt-5 font-normal'>Our Products</p>
           <Carousel
-            className=''
+            className='h-[500px] '
             // additionalTransfrom={0}
             // arrows={false}
             autoPlay={true}
@@ -104,6 +104,9 @@ const SliderOne = () => {
                 partialVisibilityGutter: 30
               }
             }}
+            customRightArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-2xl flex justify-center shadow-lg absolute w-10 left-0 -translate-x-1 bg-white h-10 mx-1 rounded-full'>{'<'}</button>}
+            customLeftArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-2xl flex justify-center shadow-lg absolute right-0 translate-x-1 bg-white w-10 h-10 mx-1 rounded-full'>{'>'}</button>}
+            customDot={<button className='bg-gray-400/50 w-3 h-3 mx-1 my-5 rounded-full'></button>}
             rewind={true}
             rewindWithAnimation={true}
             // rtl={false}
@@ -132,7 +135,7 @@ const SliderOne = () => {
                     <div className=' flex flex-col gap-2 p-4'>
                       <p className='text-2xl font-semibold'>{card.title}</p>
                       <p className='text-lg font-normal text-gray-700'> {card.description} </p>
-                      <Link className='text-xl text-blue-500 font-normal'>Learn More </Link>
+                      <Link title='learn more' className='text-xl text-blue-500 font-normal'>Learn More </Link>
                     </div>
                   </div>
                 );
