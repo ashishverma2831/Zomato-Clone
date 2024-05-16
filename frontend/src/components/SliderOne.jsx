@@ -77,7 +77,7 @@ const SliderOne = () => {
             // pauseOnHover
             // renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={true}
-            // renderDotsOutside={false}
+            // renderDotsOutside={true}
             responsive={{
               desktop: {
                 breakpoint: {
@@ -90,14 +90,14 @@ const SliderOne = () => {
               tablet: {
                 breakpoint: {
                   max: 1024,
-                  min: 464
+                  min: 512
                 },
                 items: 2,
                 partialVisibilityGutter: 30
               },
               mobile: {
                 breakpoint: {
-                  max: 464,
+                  max: 512,
                   min: 0
                 },
                 items: 1,
@@ -107,13 +107,14 @@ const SliderOne = () => {
             rewind={true}
             rewindWithAnimation={true}
             // rtl={false}
-            // shouldResetAutoplay={true}
+            shouldResetAutoplay={true}
             showDots={true}
             // renderDotsOutside={true}
             // sliderClass=""
             slidesToSlide={1}
             swipeable={true}
           >
+
             {/* <div className='w-[300px] bg-gray-50 my-5 shadow-lg rounded-lg'>
               <img className='bg-contain w-full' src={'https://www.zomato.com/partner-with-us/static/media/ZomatoEvent.c3e1f3a8.svg'} />
               <div className=' flex flex-col gap-2 p-4'>
