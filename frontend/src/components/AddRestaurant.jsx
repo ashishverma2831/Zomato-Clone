@@ -53,6 +53,14 @@ const AddRestaurant = () => {
       <SliderOne />
       <SliderTwo />
 
+      <section className='bg-red-300 p-20'>
+        <div className='bg-red-400 bg-cover bg-center bg-no-repeat bg-[url(https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZvb2R8ZW58MHx8MHx8fDA%3D)] rounded-xl max-w-screen-lg mx-auto p-8'>
+          <p className='text-4xl mb-6 text-white font-semibold'>Start your journey with Zomato</p>
+          <p className='text-white mb-6'>Create your restaurant page and register for online ordering</p>
+          <button className='bg-blue-500 mb-6 hover:bg-blue-600 px-8 py-2 text-lg text-white font-normal rounded-md'>Start now</button>
+        </div>
+      </section>
+
     </>
   )
 }
