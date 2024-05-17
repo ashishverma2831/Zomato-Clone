@@ -3,9 +3,9 @@ import React from 'react'
 const HeroSecondTwo = () => {
   return (
     <>
-        <div className="bg-white">
+        <div className="bg-white p-10">
             <div className='max-w-screen-lg mx-auto p-10'>
-                <p className='text-center font-semibold text-3xl my-5'>Why should you partner with Zomato?</p>
+                <p className='text-center font-semibold text-4xl mb-8'>Why should you partner with Zomato?</p>
                 <p className='text-center font-normal text-gray-500 text-xl px-10 my-4'>Zomato enables you to get 60% more revenue, 10x new customers and boost your brand visibility by providing insights to improve your business.</p>
                 <div className='p-5 flex gap-5 mt-10'>
                     <div className='flex-1 flex justify-center items-center shadow-xl py-6 rounded-lg'>
