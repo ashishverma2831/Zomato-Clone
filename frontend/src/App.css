@@ -5,3 +5,14 @@
 /* .react-multi-carousel-dot-list{
     background-color: aqua;
 } */
+.img-quotation::before{
+    content: '';
+    transform: translate(-32px,-32px);
+    z-index: -1;
+    position: absolute;
+    border-radius: 8px;
+    height: 128px;
+    width: 128px;
+    background-color: rgba(128, 128, 128, 0.24);
+    box-shadow: 0 0 0 0px rgba(128, 128, 128, 0.286);
+}

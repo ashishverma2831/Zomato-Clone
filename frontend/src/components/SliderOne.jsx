@@ -56,11 +56,11 @@ const SliderOne = () => {
 
   return (
     <>
-      <div className=' my-5'>
+      <div className='px-10 my-5 pb-10'>
         <div className='max-w-screen-lg mx-auto flex flex-col '>
           <p className='text-4xl text-center mt-5 font-normal'>Our Products</p>
           <Carousel
-            className='h-[500px] '
+            className='h-[500px]'
             // additionalTransfrom={0}
             // arrows={false}
             autoPlay={true}
@@ -106,7 +106,7 @@ const SliderOne = () => {
             }}
             customLeftArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-2xl flex justify-center shadow-xl absolute w-10 left-0 -translate-x-1 bg-white h-10 mx-1 rounded-full'>{'<'}</button>}
             customRightArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-2xl flex justify-center shadow-xl absolute right-0 translate-x-1 bg-white w-10 h-10 mx-1 rounded-full'>{'>'}</button>}
-            customDot={<button className='bg-gray-400/50 w-3 h-3 mx-1 my-5 rounded-full'></button>}
+            customDot={<button className='bg-gray-400/50 w-2 h-2 mx-1 my-5 rounded-full'></button>}
             rewind={true}
             rewindWithAnimation={true}
             rtl={false}

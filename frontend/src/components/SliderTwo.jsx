@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
+import '../App.css'
 
 const SliderTwo = () => {
 
@@ -28,11 +29,11 @@ const SliderTwo = () => {
 
     return (
         <>
-            <section className='bg-gray-400 p-5'>
-                <div className='bg-blue-400 py-5 px-5 max-w-screen-md mx-auto'>
+            <section className='px-5 py-10 bg-gray-100'>
+                <div className='py-5 px-5 max-w-screen-md mx-auto'>
                     <p className='text-center text-4xl '>Our happy partners</p>
                     <Carousel
-                        className='h-[300px] w-full '
+                        className='h-[300px] w-full'
                         autoPlay={true}
                         autoPlaySpeed={2000}
                         containerClass="container-with-dots"
@@ -66,9 +67,9 @@ const SliderTwo = () => {
                                 partialVisibilityGutter: 30
                             }
                         }}
-                        customLeftArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-xl flex justify-center shadow-xl absolute w-8 left-0 -translate-x-1 bg-white h-8 mx-1 rounded-full'>{'<'}</button>}
-                        customRightArrow={<button className='hover:bg-gray-100 text-gray-900 font-bold text-xl flex justify-center shadow-xl absolute right-0 translate-x-1 bg-white w-8 h-8 mx-1 rounded-full'>{'>'}</button>}
-                        customDot={<button className='bg-gray-400/50 w-3 h-3 mx-1 my-5 rounded-full'></button>}
+                        customLeftArrow={<button className='hover:bg-gray-100 border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute w-8 left-0 -translate-x-1 bg-white h-8 mx-1 rounded-full'>{'<'}</button>}
+                        customRightArrow={<button className='hover:bg-gray-100  border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute right-0 translate-x-1 bg-white w-8 h-8 mx-1 rounded-full'>{'>'}</button>}
+                        customDot={<button className='bg-gray-400/50 w-2 h-2 mx-1 my-5 rounded-full'></button>}
                         rewind={true}
                         rewindWithAnimation={true}
                         shouldResetAutoplay={true}
@@ -80,11 +81,11 @@ const SliderTwo = () => {
                         {
                             data.map((card) => {
                                 return (
-                                    <div className='w-full bg-gray-50 shadow-lg rounded-lg mx-auto flex gap-2'>
-                                        <div className='bg-red-400'>
-                                            <img className='bg-contain w-20 h-20 rounded-lg' src={card.image} />
+                                    <div className='w-full rounded-lg mx-auto flex gap-2'>
+                                        <div className='img-quotation flex justify-end place-items-end w-[160px]'>
+                                            <img className=' bg-contain w-32 h-32 rounded-lg' src={card.image} />
                                         </div>
-                                        <div className=' flex flex-col gap-2 p-4'>
+                                        <div className=' flex flex-col gap-2 p-4 flex-1'>
                                             <p className='text-2xl font-semibold'></p>
                                             <p className='text-lg font-normal text-gray-500'> {card.description} </p>
                                             <div>
