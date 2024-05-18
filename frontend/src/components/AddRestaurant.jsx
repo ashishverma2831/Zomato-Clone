@@ -9,19 +9,19 @@ const AddRestaurant = () => {
 
   const data = [
     {
-      title: 'What will Zomato charge me for creating a page on its platform?',
-      description: 'Creating a restaurant page on Zomato is free of cost. You can maintain your page by replying to reviews and do a lot more without any charges.'
+      title:'Restaurant Partner app',
+      description:'Manage all your orders on your smartphone with our Android app',
+      image:'https://b.zmtcdn.com/merchant-onboarding/2b0ec3e91e16dfcae922f213fdf808f11600934847.png'
     },
     {
-      title: 'What all documents are required for registering on online ordering?',
-      description: 'You need to have a valid FSSAI license, GST certificate, and a cancelled cheque to register for online ordering. You can also register with a food delivery partner of your choice.'
-    }, {
-      title: 'I have a large fleet of delivery boys, why should I use Zomato’s delivery service?',
-      description: "You can use your and Zomato's delivery fleet simultaneously to increase the network of your delivery radius. Also, our delivery fleet delivers orders in minimum possible time, a key factor leading to increased customer satisfaction."
+      title:'Restaurant Partner web dashboard',
+      description:'Manage all your orders on your desktop or laptop',
+      image:'https://b.zmtcdn.com/merchant-onboarding/a603975bb4aea5941c7c45bb3480be1c1600934866.png'
     },
     {
-      title: 'What happens if the average order value of Zomato orders is very low',
-      description: 'Average order value from our platform is generally more than Rs 250. However, in some cases, users want to try out your place by ordering for lesser amount. But we have observed that they eventually come back with higher value orders if they like your food.'
+      title:'API integration',
+      description:'Manage all your orders on your existing Point of Sale (POS) or third party software',
+      image:'https://b.zmtcdn.com/merchant-onboarding/e83523818f82dd8cefedf4e069424fae1600934891.png'
     }
   ]
 
@@ -70,6 +70,32 @@ const AddRestaurant = () => {
       </section>
       <SliderOne />
       <SliderTwo />
+
+      <section className='bg-red-400 p-10'>
+        <div className='bg-red-600 max-w-screen-lg mx-auto'>
+          <div className='bg-blue-400 p-5 flex flex-col gap-4'>
+            <p className='text-4xl bg-blue-600'>What do you get on sign-up</p>
+            <p className='text-gray-600 text-xl bg-purple-600'>Zomato Partner Platform helps you take your business to new heights instantly with no hassle and 100% transparency!</p>
+          </div>
+          <div className='bg-pink-500'>
+            <ul>
+              <li>
+                <p>adafnllfnlw</p>
+                <p>Lorem ipsum dolor sit amet, qui officiis omnis voluptate repellendus suscipit eveniet ad fugiat.</p>
+              </li>
+              <li>
+                <p>adafnllfnlw</p>
+                <p>Lorem ipsum dolor sit amet, qui officiis omnis voluptate repellendus suscipit eveniet ad fugiat.</p>
+              </li>
+              <li>
+                <p>adafnllfnlw</p>
+                <p>Lorem ipsum dolor sit amet, qui officiis omnis voluptate repellendus suscipit eveniet ad fugiat.</p>
+              </li>
+            </ul>
+            <div></div>
+          </div>
+        </div>
+      </section>
 
       <section className='p-20'>
         <div className='bg-cover bg-center bg-no-repeat bg-[url(https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZvb2R8ZW58MHx8MHx8fDA%3D)] rounded-xl max-w-screen-lg mx-auto p-8'>
