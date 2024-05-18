@@ -79,9 +79,9 @@ const SliderTwo = () => {
                     >
 
                         {
-                            data.map((card) => {
+                            data.map((card,index) => {
                                 return (
-                                    <div className='w-full rounded-lg mx-auto flex gap-2'>
+                                    <div key={index} className='w-full rounded-lg mx-auto flex gap-2'>
                                         <div className='img-quotation flex justify-end place-items-end w-[160px]'>
                                             <img className=' bg-contain w-32 h-32 rounded-lg' src={card.image} />
                                         </div>

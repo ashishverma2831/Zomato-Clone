@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderSecond from './HeaderSecond'
 import HeroSecond from './HeroSecond'
 import HeroSecondTwo from './HeroSecondTwo'
 import SliderOne from './SliderOne'
 import SliderTwo from './SliderTwo'
+import '../App.css'
 
 const AddRestaurant = () => {
 
@@ -27,18 +28,32 @@ const AddRestaurant = () => {
 
   const [tab, setTab] = useState(1);
 
-  setInterval(()=>{
-    // setTab(tab + 1);
-    if(tab===1){
-      setTab(2);
-    }
-    else if(tab===2){
-      setTab(3);
-    }
-    else if(tab===3){
-      setTab(1);
-    }
-  }, 5000)
+  // setInterval(()=>{
+  //   if(tab===1){
+  //     setTab(2);
+  //   }
+  //   else if(tab===2){
+  //     setTab(3);
+  //   }
+  //   else if(tab===3){
+  //     setTab(1);
+  //   }
+  // }, 2000)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (tab === 1) {
+        setTab(2);
+      }
+      else if (tab === 2) {
+        setTab(3);
+      }
+      else if (tab === 3) {
+        setTab(1);
+      }
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   console.log(tab);
 
@@ -88,20 +103,20 @@ const AddRestaurant = () => {
       <SliderOne />
       <SliderTwo />
 
-      <section className='bg-red-400 p-10'>
-        <div className='bg-red-600 max-w-screen-lg mx-auto'>
-          <div className='bg-blue-400 p-5 flex flex-col gap-4'>
-            <p className='text-4xl bg-blue-600'>What do you get on sign-up</p>
-            <p className='text-gray-600 text-xl bg-purple-600'>Zomato Partner Platform helps you take your business to new heights instantly with no hassle and 100% transparency!</p>
+      <section className='p-10'>
+        <div className='max-w-screen-lg mx-auto'>
+          <div className='p-5 flex flex-col gap-4'>
+            <p className='text-4xl font-semibold'>What do you get on sign-up</p>
+            <p className=' text-xl font-normal text-gray-500'>Zomato Partner Platform helps you take your business to new heights instantly with no hassle and 100% transparency!</p>
           </div>
-          <div className='bg-pink-500 flex gap-4'>
+          <div className='flex gap-4'>
             <div className='w-1/2 flex flex-col justify-evenly'>
 
               {
                 data.map((card,index) => {
                   return (
-                    <div className='bg-blue-300 p-5' key={index}>
-                      <div className='flex items-center gap-4'> <p className=' w-10 h-10 flex justify-center items-center rounded-full bg-gray-100 border'> {index+1} </p> <p className='text-2xl'> {card.title} </p></div>
+                    <div className='p-5' key={index}>
+                      <div className={tab-1 === index ? 'flex items-center gap-4 active-tab' : 'flex items-center gap-4'}> <p className={tab-1 === index ? ' w-10 h-10 flex justify-center items-center rounded-full border active-box':' w-10 h-10 flex justify-center items-center rounded-full bg-gray-100 border'}> {index+1} </p> <p className='text-2xl font-semibold'> {card.title} </p></div>
                       <p className='ml-10 pl-4 text-lg text-gray-500'> {card.description} </p>
                     </div>
                   );
@@ -113,10 +128,10 @@ const AddRestaurant = () => {
                 <p className='ml-10 pl-4 text-lg text-gray-500'>Lorem ipsum dolor sit amet, qui officiis omnis voluptate repellendus suscipit eveniet ad fugiat.</p>
               </div> */}
             </div>
-            <div className='bg-gray-500 w-1/2'>
+            <div className='w-1/2 flex justify-center items-center bg-cover bg-center bg-[url(./public/blob.svg)] '>
               {/* <img className=' w-[200px] mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/2b0ec3e91e16dfcae922f213fdf808f11600934847.png' /> */}
               {
-                tab===1 ? <img className=' w-[200px] mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/2b0ec3e91e16dfcae922f213fdf808f11600934847.png' /> : (tab === 2 ? <img className=' w-[200px] mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/a603975bb4aea5941c7c45bb3480be1c1600934866.png' /> : <img className=' w-[200px] mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/e83523818f82dd8cefedf4e069424fae1600934891.png' />)
+                tab===1 ? <img className=' w-[175px] mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/2b0ec3e91e16dfcae922f213fdf808f11600934847.png' /> : (tab === 2 ? <img className=' mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/a603975bb4aea5941c7c45bb3480be1c1600934866.png' /> : <img className=' mx-auto' src='https://b.zmtcdn.com/merchant-onboarding/e83523818f82dd8cefedf4e069424fae1600934891.png' />)
               }
             </div>
           </div>

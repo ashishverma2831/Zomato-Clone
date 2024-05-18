@@ -16,3 +16,11 @@
     background-color: rgba(128, 128, 128, 0.24);
     box-shadow: 0 0 0 0px rgba(128, 128, 128, 0.286);
 }
+
+.active-tab{
+    color: rgba(0, 0, 255, 0.897);
+}
+.active-box{
+    border : 1px solid rgba(0, 0, 255, 0.897);
+    background-color: rgba(0, 0, 255, 0.157);
+}

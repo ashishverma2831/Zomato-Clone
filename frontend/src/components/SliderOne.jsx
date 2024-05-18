@@ -6,26 +6,6 @@ import '../App.css'
 
 const SliderOne = () => {
 
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     // the naming can be any, depends on you.
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 5
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1
-  //   }
-  // };
-
   const data = [
     {
       title: 'Listings',
@@ -61,23 +41,13 @@ const SliderOne = () => {
           <p className='text-4xl text-center mt-5 font-normal'>Our Products</p>
           <Carousel
             className='h-[500px]'
-            // additionalTransfrom={0}
-            // arrows={false}
             autoPlay={true}
             autoPlaySpeed={2000}
-            // centerMode={false}
             containerClass="container-with-dots"
             dotListClass="react-multi-carousel-dot-list"
             draggable={true}
-            // focusOnSelect={false}
             infinite={true}
-            // itemClass=""
-            // keyBoardControl
-            // minimumTouchDrag={80}
-            // pauseOnHover
-            // renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={true}
-            // renderDotsOutside={true}
             responsive={{
               desktop: {
                 breakpoint: {
@@ -109,11 +79,8 @@ const SliderOne = () => {
             customDot={<button className='bg-gray-400/50 w-2 h-2 mx-1 my-5 rounded-full'></button>}
             rewind={true}
             rewindWithAnimation={true}
-            rtl={false}
             shouldResetAutoplay={true}
             showDots={true}
-            // renderDotsOutside={true}
-            // sliderClass=""
             slidesToSlide={1}
             swipeable={true}
           >
@@ -128,9 +95,9 @@ const SliderOne = () => {
             </div> */}
 
             {
-              data.map((card) => {
+              data.map((card,index) => {
                 return (
-                  <div className='w-[300px] bg-gray-50 my-5 shadow-lg rounded-lg mx-auto'>
+                  <div key={index} className='w-[300px] bg-gray-50 my-5 shadow-lg rounded-lg mx-auto'>
                     <img className='bg-contain w-full' src={card.image} />
                     <div className=' flex flex-col gap-2 p-4'>
                       <p className='text-2xl font-semibold'>{card.title}</p>
