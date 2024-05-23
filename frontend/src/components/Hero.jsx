@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
@@ -99,8 +100,8 @@ const Hero = () => {
                 {
                     cities.map((city)=>{
                         return (
-                            <div>
-                <a href="#" className="flex items-center justify-between p-5 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                            <div key={city}>
+                <Link to={'/'+city.toLowerCase()} className="flex items-center justify-between p-5 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
   <span className="w-full text-xl font-normal text-black">{city} Restaurants</span>
   <svg
     className="w-4 h-4 ms-2 rtl:rotate-180"
@@ -117,7 +118,7 @@ const Hero = () => {
       d="M1 5h12m0 0L9 1m4 4L9 9"
     />
   </svg>
-</a>
+</Link>
 
                 </div>
                         )
