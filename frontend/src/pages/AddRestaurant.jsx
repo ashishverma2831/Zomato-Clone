@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import HeaderSecond from './HeaderSecond'
-import HeroSecond from './HeroSecond'
-import HeroSecondTwo from './HeroSecondTwo'
-import SliderOne from './SliderOne'
-import SliderTwo from './SliderTwo'
+import HeaderSecond from '../components/HeaderSecond'
+import HeroSecond from '../components/HeroSecond'
+import HeroSecondTwo from '../components/HeroSecondTwo'
+import SliderOne from '../components/SliderOne'
+import SliderTwo from '../components/SliderTwo'
 import '../App.css'
 
 const AddRestaurant = () => {
