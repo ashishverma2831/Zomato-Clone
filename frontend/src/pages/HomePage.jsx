@@ -1,6 +1,13 @@
 import React from 'react'
 import HomeCard from '../components/HomeCard'
+import styled from 'styled-components'
 
+const Section = styled.section`
+  display:flex;
+  justify-content: space-evenly;
+  gap:20px;
+  flex-wrap: wrap;
+  `;
 
 
 const HomePage = () => {
@@ -28,9 +35,9 @@ const HomePage = () => {
         HomePage
 
 
-        <section>
+        <Section className='max-w-screen-xl mx-auto p-10'>
           <HomeCard cardData={cardData} />
-        </section>
+        </Section>
     </>
   )
 }
