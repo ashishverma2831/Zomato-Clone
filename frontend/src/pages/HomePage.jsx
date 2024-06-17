@@ -99,7 +99,13 @@ const HomePage = () => {
             >
               <div className="p-5 border-gray-200">
                 <p className=" text-gray-500 text-left">
-                  Creating a restaurant page on Zomato is free of cost. You can maintain your page by replying to reviews and do a lot more without any charges.
+                  {
+                    popularCuisines.map((cuisine,index) => {
+                      return (
+                        <span key={index} className='text-blue-500 hover:underline cursor-pointer'> {cuisine} </span>
+                      )
+                    })
+                  }
                 </p>
               </div>
             </div>
