@@ -15,16 +15,16 @@ const Section = styled.section`
 const HomePage = () => {
 
   const popularCuisines = [
-    'Bakery food near me','Beverages food near me','Biryani food near me','Burger food near me','Chinese food near me','Continental food near me','Desserts food near me','Ice Cream food near me','Italian food near me','Mithai food near me','Momos food near me','Mughlai food near me','North Indian food near me','Pizza food near me','Rolls food near me','Sandwich food near me','Shake food near me','South Indian food near me','Street food near me','Tea food near me'
+    'Bakery food near me', 'Beverages food near me', 'Biryani food near me', 'Burger food near me', 'Chinese food near me', 'Continental food near me', 'Desserts food near me', 'Ice Cream food near me', 'Italian food near me', 'Mithai food near me', 'Momos food near me', 'Mughlai food near me', 'North Indian food near me', 'Pizza food near me', 'Rolls food near me', 'Sandwich food near me', 'Shake food near me', 'South Indian food near me', 'Street food near me', 'Tea food near me'
   ]
   const popularRestuarants = [
-    'Bakeries near me','Bars near me','Beverage Shops near me','Bhojanalya near me','Cafés near me','Casual Dining near me','Clubs near me','Cocktail Bars near me','Dessert Parlors near me','Dhabas near me','Fine Dining near me','Food Courts near me','Food Trucks near me','Kiosks near me','Lounges near me','Microbreweries near me','Paan Shop near me','Quick Bites near me','Sweet Shops near me'
+    'Bakeries near me', 'Bars near me', 'Beverage Shops near me', 'Bhojanalya near me', 'Cafés near me', 'Casual Dining near me', 'Clubs near me', 'Cocktail Bars near me', 'Dessert Parlors near me', 'Dhabas near me', 'Fine Dining near me', 'Food Courts near me', 'Food Trucks near me', 'Kiosks near me', 'Lounges near me', 'Microbreweries near me', 'Paan Shop near me', 'Quick Bites near me', 'Sweet Shops near me'
   ]
   const topRestuarants = [
-    'Bikanervala','Biryani Blues','Burger King','Burger Singh','Haldiram','KFC','McDonald','Pizza Hut','Sagar Ratna','WOW! Momo'
+    'Bikanervala', 'Biryani Blues', 'Burger King', 'Burger Singh', 'Haldiram', 'KFC', 'McDonald', 'Pizza Hut', 'Sagar Ratna', 'WOW! Momo'
   ]
   const cities = [
-    'Delhi NCR,','Kolkata','Mumbai','Bengaluru','Pune','Hyderabad','Chennai','Lucknow','Kochi','Jaipur','Ahmedabad','Chandigarh','Goa','Indore','Gangtok,','Nashik','Ooty','Shimla','Ludhiana','Guwahati','Amritsar','Kanpur','Allahabad','Aurangabad','Bhopal','Ranchi','Visakhapatnam','Bhubaneswar','Coimbatore','Mangalore','Vadodara','Nagpur','Agra','Dehradun','Mysore','Puducherry','Surat','Varanasi','Patna','Udaipur','Srinagar','Khajuraho','Neemrana','Cuttack','Trivandrum','Haridwar','Leh','Pushkar','Rajkot','Madurai','Kozhikode','Alappuzha','Thrissur','Manipal','Vijayawada','Jodhpur','Kota','Ajmer','Mussoorie','Rishikesh','Jalandhar','Jammu','Manali'
+    'Delhi NCR,', 'Kolkata', 'Mumbai', 'Bengaluru', 'Pune', 'Hyderabad', 'Chennai', 'Lucknow', 'Kochi', 'Jaipur', 'Ahmedabad', 'Chandigarh', 'Goa', 'Indore', 'Gangtok,', 'Nashik', 'Ooty', 'Shimla', 'Ludhiana', 'Guwahati', 'Amritsar', 'Kanpur', 'Allahabad', 'Aurangabad', 'Bhopal', 'Ranchi', 'Visakhapatnam', 'Bhubaneswar', 'Coimbatore', 'Mangalore', 'Vadodara', 'Nagpur', 'Agra', 'Dehradun', 'Mysore', 'Puducherry', 'Surat', 'Varanasi', 'Patna', 'Udaipur', 'Srinagar', 'Khajuraho', 'Neemrana', 'Cuttack', 'Trivandrum', 'Haridwar', 'Leh', 'Pushkar', 'Rajkot', 'Madurai', 'Kozhikode', 'Alappuzha', 'Thrissur', 'Manipal', 'Vijayawada', 'Jodhpur', 'Kota', 'Ajmer', 'Mussoorie', 'Rishikesh', 'Jalandhar', 'Jammu', 'Manali'
   ]
   const cardData = [
     {
@@ -46,15 +46,15 @@ const HomePage = () => {
 
   return (
     <>
-        HomePage
+      HomePage
 
-        <Header />
+      <Header />
 
-        {/* <Section className='max-w-screen-xl mx-auto p-10'>
+      {/* <Section className='max-w-screen-xl mx-auto p-10'>
           <HomeCard cardData={cardData} />
         </Section> */}
 
-<section className='py-10 text-center'>
+      <section className='py-10 text-center'>
         <p className='text-4xl text-left px-5'>Explore options near me</p>
         <div className='max-w-screen-lg text-center mx-auto my-10'>
 
@@ -100,10 +100,19 @@ const HomePage = () => {
               <div className="p-5 border-gray-200">
                 <p className=" text-gray-500 text-left">
                   {
-                    popularCuisines.map((cuisine,index) => {
-                      return (
-                        <span key={index} className='text-blue-500 hover:underline cursor-pointer'> {cuisine} </span>
-                      )
+                    popularCuisines.map((cuisine, index) => {
+                      if (index !== popularCuisines.length - 1) {
+                        return (<span key={index}>
+                          <span className='text-gray-500 hover:text-gray-700 cursor-pointer'> {cuisine} </span>
+                          <span className='text-gray-500 mx-1 text-xl'> . </span>
+                        </span>
+                        )
+                      } else {
+                        return (<span key={index}>
+                          <span className='text-gray-500 hover:text-gray-700 cursor-pointer'> {cuisine} </span>
+                        </span>
+                        )
+                      }
                     })
                   }
                 </p>
@@ -118,7 +127,7 @@ const HomePage = () => {
                 aria-expanded="true"
                 aria-controls="accordion-flush-body-2"
               >
-                <span> What all documents are required for registering on online ordering? </span>
+                <span> Popular restaurant types near me </span>
                 <svg
                   data-accordion-icon=""
                   className="w-3 h-3 rotate-180 shrink-0"
@@ -144,7 +153,22 @@ const HomePage = () => {
             >
               <div className="p-5 border-gray-200">
                 <p className=" text-gray-500 text-left">
-                  You need to have a valid FSSAI license, GST certificate, and a cancelled cheque to register for online ordering. You can also register with a food delivery partner of your choice.
+                  {
+                    popularRestuarants.map((restaurant, index) => {
+                      if (index !== popularRestuarants.length - 1) {
+                        return (<span key={index}>
+                          <span className='text-gray-500 hover:text-gray-700 cursor-pointer'> {restaurant} </span>
+                          <span className='text-gray-500 mx-1 text-xl'> . </span>
+                        </span>
+                        )
+                      } else {
+                        return (<span key={index}>
+                          <span className='text-gray-500 hover:text-gray-700 cursor-pointer'> {restaurant} </span>
+                        </span>
+                        )
+                      }
+                    })
+                  }
                 </p>
               </div>
             </div>
@@ -157,7 +181,7 @@ const HomePage = () => {
                 aria-expanded="true"
                 aria-controls="accordion-flush-body-3"
               >
-                <span> I have a large fleet of delivery boys, why should I use Zomato’s delivery service? </span>
+                <span> Top Restaurant Chains</span>
                 <svg
                   data-accordion-icon=""
                   className="w-3 h-3 rotate-180 shrink-0"
@@ -182,8 +206,14 @@ const HomePage = () => {
               aria-labelledby="accordion-flush-heading-3"
             >
               <div className="p-5 border-gray-200">
-                <p className=" text-gray-500 text-left">
-                  You can use your and Zomato's delivery fleet simultaneously to increase the network of your delivery radius. Also, our delivery fleet delivers orders in minimum possible time, a key factor leading to increased customer satisfaction.
+                <p className=" text-gray-500 text-left flex justify-evenly gap-4 flex-wrap">
+                  {
+                    topRestuarants.map((restaurant, index) => {
+                      return (
+                        <span key={index} className='min-w-[120px] text-gray-500 hover:text-gray-700 cursor-pointer'> {restaurant} </span>
+                      )
+                    })
+                  }
                 </p>
               </div>
             </div>
@@ -196,7 +226,7 @@ const HomePage = () => {
                 aria-expanded="true"
                 aria-controls="accordion-flush-body-4"
               >
-                <span> What happens if the average order value of Zomato orders is very low? </span>
+                <span> Cities We Deliver To </span>
                 <svg
                   data-accordion-icon=""
                   className="w-3 h-3 rotate-180 shrink-0"
@@ -221,8 +251,14 @@ const HomePage = () => {
               aria-labelledby="accordion-flush-heading-4"
             >
               <div className="p-5 border-gray-200">
-                <p className="text-gray-500 text-left">
-                  Average order value from our platform is generally more than Rs 250. However, in some cases, users want to try out your place by ordering for lesser amount. But we have observed that they eventually come back with higher value orders if they like your food.
+              <p className=" text-gray-500 text-left flex justify-evenly gap-4 flex-wrap">
+                  {
+                    cities.map((city, index) => {
+                      return (
+                        <span key={index} className='min-w-[120px] text-gray-500 hover:text-gray-700 cursor-pointer'> {city} </span>
+                      )
+                    })
+                  }
                 </p>
               </div>
             </div>
@@ -230,7 +266,7 @@ const HomePage = () => {
         </div>
       </section>
 
-        {/* <Footer /> */}
+      {/* <Footer /> */}
     </>
   )
 }
