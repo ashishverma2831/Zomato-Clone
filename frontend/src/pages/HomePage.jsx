@@ -50,9 +50,9 @@ const HomePage = () => {
 
       <Header />
 
-      {/* <Section className='max-w-screen-xl mx-auto p-10'>
+      <Section className='max-w-screen-xl mx-auto p-10'>
           <HomeCard cardData={cardData} />
-        </Section> */}
+        </Section>
 
       <section className='py-10 text-center'>
         <p className='text-4xl text-left px-5'>Explore options near me</p>
@@ -266,7 +266,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
