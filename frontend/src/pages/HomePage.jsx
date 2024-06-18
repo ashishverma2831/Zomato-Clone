@@ -51,8 +51,8 @@ const HomePage = () => {
       <Header />
 
       <Section className='max-w-screen-xl mx-auto p-10'>
-          <HomeCard cardData={cardData} />
-        </Section>
+        <HomeCard cardData={cardData} />
+      </Section>
 
       <Section className='max-w-screen-xl mx-auto p-10'>
         <div className='w-full'>
@@ -80,11 +80,36 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        </Section>
+      </Section>
 
-      <section className='py-10 text-center '>
-        <p className='text-4xl mx-auto max-w-screen-lg text-left px-5'>Explore options near me</p>
-        <div className='max-w-screen-lg  text-center mx-auto my-10'>
+      <Section className=' bg-[#FFFBF7] '>
+        <div className=' mx-auto flex p-5 gap-4 items-end bg-blue-300'>
+          <img alt='image' className='bg-orange-400 w-[320px] h-[320px]' src='https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png' />
+          <div className='flex bg-purple-400 px-5 flex-col gap-4 min-w-[400px] flex-1'>
+            <p className='text-5xl '>Get the Zomato app</p>
+            <p className='text-lg '>We will send you a link, open it on your phone to download the app</p>
+            <div className=''>
+              <input type='radio' name='Email' />
+              <label>Email</label>
+              <input type='radio' name='phone' />
+              <label>Phone</label>  
+            </div>
+            <div>
+              <input type='text' placeholder='Enter your email' />
+              <button>Share App Link</button>
+            </div>
+            <p>Download app from</p>
+            <div>
+              <button className='mb-4 mt-[-30px] h-10'><img width={150} src="/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
+              <button className='h-10'><img width={150} src="/google-play-badge-logo-svgrepo-com.svg" /></button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <section className='py-10 text-center'>
+        <p className='text-4xl mx-auto max-w-screen-xl px-12 text-left '>Explore options near me</p>
+        <div className='max-w-screen-xl px-10 text-center mx-auto my-10'>
 
           <div
             id="accordion-flush"
@@ -279,7 +304,7 @@ const HomePage = () => {
               aria-labelledby="accordion-flush-heading-4"
             >
               <div className="p-5 border-gray-200">
-              <p className=" text-gray-500 text-left flex justify-evenly gap-4 flex-wrap">
+                <p className=" text-gray-500 text-left flex justify-evenly gap-4 flex-wrap">
                   {
                     cities.map((city, index) => {
                       return (
