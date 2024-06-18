@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeCard from '../components/HomeCard'
 import styled from 'styled-components'
 import Footer from '../components/Footer';
@@ -44,10 +44,10 @@ const HomePage = () => {
     }
   ]
 
+  const [activeRadio, setActiveRadio] = useState('email');
+
   return (
     <>
-      HomePage
-
       <Header />
 
       <Section className='max-w-screen-xl mx-auto p-10'>
@@ -82,30 +82,39 @@ const HomePage = () => {
         </div>
       </Section>
 
-      <Section className=' bg-[#FFFBF7] '>
-        <div className=' mx-auto flex p-5 gap-4 items-end bg-blue-300'>
-          <img alt='image' className='bg-orange-400 w-[320px] h-[320px]' src='https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png' />
-          <div className='flex bg-purple-400 px-5 flex-col gap-4 min-w-[400px] flex-1'>
+      <section className='my-10 bg-[#FFFBF7] '>
+        <div className='py-10 max-w-screen-md w-30 mx-auto flex sm:flex-row flex-col items-center px-5 gap-4 sm:items-end '>
+          <img alt='image' className=' w-[250px] h-[250px]' src='https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png' />
+          <div className='flex px-5 flex-col gap-4 min-w-[400px]'>
             <p className='text-5xl '>Get the Zomato app</p>
-            <p className='text-lg '>We will send you a link, open it on your phone to download the app</p>
-            <div className=''>
-              <input type='radio' name='Email' />
-              <label>Email</label>
-              <input type='radio' name='phone' />
-              <label>Phone</label>  
+            <p className='text-lg font-light'>We will send you a link, open it on your phone to download the app</p>
+            <div className=' flex items-center justify-start gap-12'>
+              <div className='flex items-center gap-2'>
+                <input type='radio' value='email' onChange={()=>setActiveRadio('email')} id='Email' className='text-red-500' name='radio-input'/>
+                <label>Email</label>
+              </div>
+              <div className='flex items-center gap-2'>
+                <input type='radio' value='phone' onChange={()=>setActiveRadio('phone')} id='phone' className='text-red-500' name='radio-input' />
+                <label>Phone</label>
+              </div>
             </div>
-            <div>
-              <input type='text' placeholder='Enter your email' />
-              <button>Share App Link</button>
+            <div className='flex gap-2 justify-evenly'>
+              {/* <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Email' /> */}
+              {/* <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Phone' /> */}
+             
+              {
+                activeRadio === 'email' ? <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Email' /> : <input type='number' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Phone' />
+              }
+              <button className='bg-[#EF4F5F] rounded-md hover:bg-red-700 text-white px-6'>Share App Link</button>
             </div>
-            <p>Download app from</p>
-            <div>
-              <button className='mb-4 mt-[-30px] h-10'><img width={150} src="/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
-              <button className='h-10'><img width={150} src="/google-play-badge-logo-svgrepo-com.svg" /></button>
+            <p className='text-[#9C9C9C]'>Download app from</p>
+            <div className='flex gap-4'>
+              <img alt='image' className='w-[120px] h-[40px]' src='https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png' />
+              <img alt='image' className='w-[120px] h-[40px]' src='https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png' />  
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       <section className='py-10 text-center'>
         <p className='text-4xl mx-auto max-w-screen-xl px-12 text-left '>Explore options near me</p>
