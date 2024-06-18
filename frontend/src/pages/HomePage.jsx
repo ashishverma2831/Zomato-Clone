@@ -433,7 +433,7 @@ const HomePage = () => {
                   {
                     topRestuarants.map((restaurant, index) => {
                       return (
-                        <span key={index} className='min-w-[120px] text-gray-500 hover:text-gray-700 cursor-pointer'> {restaurant} </span>
+                        <span key={index} className='min-w-[100px] md:min-w-[200px] text-gray-500 hover:text-gray-700 cursor-pointer'> {restaurant} </span>
                       )
                     })
                   }
@@ -473,12 +473,12 @@ const HomePage = () => {
               className="hidden border rounded-lg -translate-y-4 shadow-sm"
               aria-labelledby="accordion-flush-heading-4"
             >
-              <div className="p-5 border-gray-200">
-                <p className=" text-gray-500 text-left flex justify-evenly gap-4 flex-wrap">
+              <div className="p-5 border-gray-200 ">
+                <p className=" text-gray-500 text-left flex justify-center gap-4 flex-wrap">
                   {
                     cities.map((city, index) => {
                       return (
-                        <span key={index} className='min-w-[120px] text-gray-500 hover:text-gray-700 cursor-pointer'> {city} </span>
+                        <span key={index} className='min-w-[100px] md:min-w-[200px] text-gray-500 hover:text-gray-700 cursor-pointer'> {city} </span>
                       )
                     })
                   }
