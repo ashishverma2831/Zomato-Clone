@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HomeCard from '../components/HomeCard'
 import styled from 'styled-components'
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { Link, useParams } from 'react-router-dom';
+import HeaderThird from '../components/HeaderThird';
 
 const Section = styled.section`
   display:flex;
@@ -130,9 +131,18 @@ const HomePage = () => {
     }
   }
 
+  // useEffect(() => {
+  //   window.location.reload();
+  // }, [setTimeout(1000)])
+
+  // setTimeout(() => {
+  //   window.location.reload();
+  // }, 1000)
+  
+
   return (
     <>
-      <Header />
+      <HeaderThird />
 
       <Section className='max-w-screen-xl mx-auto p-10'>
         <HomeCard cardData={cardData} />
