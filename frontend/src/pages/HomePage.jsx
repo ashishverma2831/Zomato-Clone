@@ -213,7 +213,7 @@ const HomePage = () => {
                   }
                   else if(index===LucknowCities.length-1){
                     return (
-                      <div onClick={handleList} className={ hiddenList === 'hidden'? `flex border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl` :` border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl hidden`} >
+                      <div key={index} onClick={handleList} className={ hiddenList === 'hidden'? `flex border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl` :` border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl hidden`} >
                         <p className='text-xl font-medium'> {hiddenList==='hidden'?'see more':'see less'} </p>
                       </div>
                     )

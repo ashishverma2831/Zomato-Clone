@@ -3,6 +3,9 @@ import 'flowbite';
 import { NavLink } from 'react-router-dom';
 import { LogIn } from './LogIn';
 import { SignUp } from './SignUp';
+import LocationSearchInput from './LocationSearchInput';
+
+
 
 const HeaderThird = () => {
 
@@ -22,7 +25,7 @@ const HeaderThird = () => {
                                         className="block py-2 px-3 rounded md:bg-transparent  md:p-0 text-white"
                                         aria-current="page"
                                     >
-                                        Add
+                                        Add restaurant
                                     </NavLink>
                                 </li>
                                 <li>
@@ -358,7 +361,8 @@ const HeaderThird = () => {
                     <div className=' w-full  md:max-w-screen-md mx-auto p-5 my-10 '>
                         <h1 className='text-white text-7xl italic font-bold text-center my-4'>Zomato</h1>
                         <p className='text-white text-4xl font-normal text-center my-4'>Discover the best food & drinks in Lucknow</p>
-                        <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className=' w-full py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border-0 focus:outline-none focus:border-0  rounded-lg' />
+                        {/* <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className=' w-full py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border-0 focus:outline-none focus:border-0  rounded-lg' /> */}
+                        <LocationSearchInput />
                     </div>
                 </div>
             </header>
