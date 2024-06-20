@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { popularCuisines, popularRestuarants, topRestuarants, cities } from '../data/data';
 import RestaurantCard from '../components/RestaurantCard';
 import FilterButton from '../components/FilterButton';
+import AdvertisementCard from '../components/AdvertisementCard';
 
 const HomeRestaurants = () => {
 
@@ -57,6 +58,7 @@ const HomeRestaurants = () => {
                 </div>
             </main>
 
+            <AdvertisementCard />
             <FilterButton />
             <RestaurantCard />
 
