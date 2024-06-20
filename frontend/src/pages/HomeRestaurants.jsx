@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Footer from '../components/Footer';
 import { popularCuisines, popularRestuarants, topRestuarants, cities } from '../data/data';
 import RestaurantCard from '../components/RestaurantCard';
+import FilterButton from '../components/FilterButton';
 
 const HomeRestaurants = () => {
 
@@ -56,6 +57,7 @@ const HomeRestaurants = () => {
                 </div>
             </main>
 
+            <FilterButton />
             <RestaurantCard />
 
             <section className='py-10 text-center'>
