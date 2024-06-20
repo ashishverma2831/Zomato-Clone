@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Footer from '../components/Footer';
 import { popularCuisines, popularRestuarants, topRestuarants, cities } from '../data/data';
+import RestaurantCard from '../components/RestaurantCard';
 
 const HomeRestaurants = () => {
 
@@ -54,6 +55,8 @@ const HomeRestaurants = () => {
                     <p>{activeTab} </p>
                 </div>
             </main>
+
+            <RestaurantCard />
 
             <section className='py-10 text-center'>
                 <p className='text-4xl mx-auto max-w-screen-xl px-12 text-left '>Explore options near me</p>
