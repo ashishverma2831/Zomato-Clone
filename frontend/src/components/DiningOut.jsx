@@ -1,9 +1,16 @@
 import React from 'react'
 
 const DiningOut = () => {
+
+    const filters = [
+        'Filters','Offers','Rating:','Pet friendly','Outdoor Seating','Serves Alcohol','Open now'
+    ]
+    const rating=0;
+
     return (
         <>
-            <section className='max-w-screen-xl mx-auto p-10'>
+            <section className='bg-gray-100'>
+            <div className='max-w-screen-xl mx-auto p-8'>
                 <div className='w-full'>
                     <p className='text-4xl text-left px-3'>Collections</p>
                     <div className='flex justify-between p-3'>
@@ -29,6 +36,15 @@ const DiningOut = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            </section>
+
+            <section className='max-w-screen-xl mx-auto p-10'>
+                {
+                    filters.map((filter) => (
+                        <button className='text-xl text-gray-500 mx-2'>{filter}</button>
+                    ))
+                }
             </section>
         </>
     )
