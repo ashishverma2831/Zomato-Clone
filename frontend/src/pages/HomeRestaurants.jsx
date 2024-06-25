@@ -50,6 +50,12 @@ const HomeRestaurants = () => {
                 </div>
             </header>
 
+            <section>
+                <div className='max-w-screen-lg mx-auto px-5 py-4 '>
+                    <p className='text-gray-500 text-sm'>Home / India / Chennai / T.Nagar Restaurants</p>
+                </div>
+            </section>
+
             <main className='bg-white'>
                 <div className='max-w-screen-lg flex flex-wrap mx-auto px-5 '>
                     <div onClick={() => { handleTabs("dining") }} className={activeTab === "dining" ? 'p-4 text-xl text-red-500 font-semibold flex items-center gap-2 border-b-red-500 border-b-4' : 'p-4 text-xl cursor-pointer text-red-500 font-semibold flex items-center gap-2'}> <div className='p-4 rounded-full bg-[#E5F3F3]'><img className='h-8 w-8' src={activeTab === "dining" ? 'https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png' : 'https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png'} /></div>  Dining Out</div>
