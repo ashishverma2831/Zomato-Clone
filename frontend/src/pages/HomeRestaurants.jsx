@@ -61,10 +61,6 @@ const HomeRestaurants = () => {
                     }
             </main>
 
-            {/* <AdvertisementCard /> */}
-            {/* <FilterButton /> */}
-            <RestaurantCard />
-
             <section className='py-10 text-center'>
                 <p className='text-4xl mx-auto max-w-screen-xl px-12 text-left '>Explore options near me</p>
                 <div className='max-w-screen-xl px-10 text-center mx-auto my-10'>

@@ -3,7 +3,7 @@ import React from 'react'
 const RestaurantCard = () => {
   return (
     <>
-        <div className='w-[330px] bg-transparent hover:border hover:bg-white hover:shadow-xl p-2 hover:rounded-xl'>
+        <div className='w-[330px] flex-1 bg-transparent hover:border hover:bg-white hover:shadow-xl p-2 hover:rounded-xl'>
             <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
             <div className='flex flex-col py-2'>
                 <div className=' flex justify-between items-center '>
