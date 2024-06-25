@@ -1,5 +1,6 @@
 import React from 'react'
 import FilterButton from './FilterButton';
+import AdvertisementCard from './AdvertisementCard';
 
 const DiningOut = () => {
 
@@ -40,7 +41,7 @@ const DiningOut = () => {
                 </div>
             </section>
 
-            <section className='bg-red-800 sticky top-0'>
+            <section>
                 <div className='bg-white max-w-screen-xl flex flex-wrap gap-4 mx-auto px-10 py-5'>
                     {
                         filters.map((filter, index) => (
@@ -49,6 +50,8 @@ const DiningOut = () => {
                     }
                 </div>
             </section>
+
+            <AdvertisementCard />
 
         </>
     )

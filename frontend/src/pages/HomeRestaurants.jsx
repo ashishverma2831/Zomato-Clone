@@ -61,7 +61,7 @@ const HomeRestaurants = () => {
                     }
             </main>
 
-            <AdvertisementCard />
+            {/* <AdvertisementCard /> */}
             {/* <FilterButton /> */}
             <RestaurantCard />
 
