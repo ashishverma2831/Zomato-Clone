@@ -186,6 +186,7 @@ const HomePage = () => {
               <p className='flex justify-between '><button className='text-red-500 text-lg md:text-xl'>All collections in Lucknow <i className="text-sm mx-2 fa-solid fa-play"></i></button></p>
             </div>
             <Carousel
+              className='py-5'
               autoPlay={false}
               autoPlaySpeed={4000}
               containerClass="container-with-dots"
