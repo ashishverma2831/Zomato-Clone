@@ -1,11 +1,14 @@
 import React from 'react'
+import FilterButton from './FilterButton'
+import AdvertisementCard from './AdvertisementCard'
+import RestaurantCard from './RestaurantCard'
 
 const Nightlife = () => {
 
   const filters = [
     'Filters', 'Offers', 'Serves Alcohol', 'Open now'
   ]
-  
+
   return (
     <>
       <section className='bg-gray-100'>
@@ -46,6 +49,37 @@ const Nightlife = () => {
               <FilterButton key={index} text={filter} />
             ))
           }
+        </div>
+      </section>
+
+      <AdvertisementCard />
+
+      <section>
+        <div className='py-5 px-10 max-w-screen-xl mx-auto '>
+          <p className='px-2 text-4xl font-normal'>Nightlife: Night clubs, pubs and bar in T. Nagar</p>
+          <div className='flex flex-wrap py-5 gap-2 md:gap-6'>
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+          </div>
         </div>
       </section>
 
