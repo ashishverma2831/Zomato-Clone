@@ -8,7 +8,7 @@ import DiningOut from '../components/DiningOut';
 import Delivery from '../components/Delivery';
 import Nightlife from '../components/Nightlife';
 import HeaderFourth from '../components/HeaderFourth';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const HomeRestaurants = () => {
 
@@ -21,14 +21,14 @@ const HomeRestaurants = () => {
 
     return (
         <>
-            <HeaderFourth />
+            <HeaderFourth city={city} town={town} />
 
             <section>
                 <div className='max-w-screen-lg mx-auto px-5 py-4 '>
                     <p className='text-gray-500 text-sm'>
-                        <span className='capitalize hover:text-red-600'> Home / </span>
-                        <span className='capitalize hover:text-red-600'> India /  </span>
-                        <span className='capitalize hover:text-red-600'>{city} / </span>
+                        <Link to={'/'+city+'/'+town}  className='capitalize hover:text-red-600'> Home / </Link>
+                        <Link to={'/'} className='capitalize hover:text-red-600'> India /  </Link>
+                        <Link to={'/'+city} className='capitalize hover:text-red-600'>{city} / </Link>
                         <span className='capitalize text-gray-400'>{town}</span>
                     </p>
                 </div>
