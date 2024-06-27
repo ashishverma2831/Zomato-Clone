@@ -47,9 +47,9 @@ const HomePage = () => {
     }
   ]
 
-  const LucknowCities = [
+  const cityTowns = [
     {
-      city: 'Gomti Nagar',
+      city: 'GomtiNagar',
       place: '1689 places'
     },
     {
@@ -61,7 +61,7 @@ const HomePage = () => {
       place: '1689 places'
     },
     {
-      city: 'Indira Nagar',
+      city: 'IndiraNagar',
       place: '1689 places'
     },
     {
@@ -81,7 +81,7 @@ const HomePage = () => {
       place: '1689 places'
     },
     {
-      city: 'Gomti Nagar',
+      city: 'GomtiNagar',
       place: '1689 places'
     },
     {
@@ -93,7 +93,7 @@ const HomePage = () => {
       place: '1689 places'
     },
     {
-      city: 'Indira Nagar',
+      city: 'IndiraNagar',
       place: '1689 places'
     },
     {
@@ -118,8 +118,8 @@ const HomePage = () => {
     }
   ]
 
-  const selectedCity = useParams().city;
-  console.log(selectedCity);
+  const {city} = useParams();
+  console.log(city);
   const [activeRadio, setActiveRadio] = useState('email');
   const [hiddenList, setHiddenList] = useState('hidden');
 
@@ -253,19 +253,19 @@ const HomePage = () => {
 
       <section className='py-10'>
         <div className='max-w-screen-xl mx-auto p-10'>
-          <p className='text-4xl mb-10'>Popular localites in and around <span className='font-semibold capitalize'>{selectedCity}</span>  </p>
+          <p className='text-4xl mb-10'>Popular localites in and around <span className='font-semibold capitalize'>{city}</span>  </p>
           <div>
             <div className=' grid grid-cols-3 gap-6 gap-y-8'>
               {
-                LucknowCities.map((city, index) => {
-                  if (index !== LucknowCities.length - 1 && index < 8) {
+                cityTowns.map((cityTown, index) => {
+                  if (index !== cityTowns.length - 1 && index < 8) {
                     return (
                       <div key={index}>
-                        <Link to={'/' + city} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                        <Link to={'/'+city+'/'+cityTown.city.trim().toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
                           {/* <span className="w-full text-xl font-normal text-black">{city} Restaurants</span> */}
                           <div>
-                            <p className='text-xl font-normal'>{city.city} </p>
-                            <p className='font-light'>{city.place} </p>
+                            <p className='text-xl font-normal'>{cityTown.city} </p>
+                            <p className='font-light'>{cityTown.place} </p>
                           </div>
                           <svg
                             className="text-gray-500 w-4 h-4 ms-2 rtl:rotate-180"
@@ -286,7 +286,7 @@ const HomePage = () => {
                       </div>
                     )
                   }
-                  else if (index === LucknowCities.length - 1) {
+                  else if (index === cityTowns.length - 1) {
                     return (
                       <div key={index} onClick={handleList} className={hiddenList === 'hidden' ? `flex border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl` : ` border justify-center items-center p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl hidden`} >
                         <p className='text-xl font-medium'> {hiddenList === 'hidden' ? 'see more' : 'see less'} </p>
@@ -296,11 +296,11 @@ const HomePage = () => {
                   else {
                     return (
                       <div key={index} className={hiddenList}>
-                        <Link to={'/' + city} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                        <Link to={'/'+city+'/'+cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
                           {/* <span className="w-full text-xl font-normal text-black">{city} Restaurants</span> */}
                           <div>
-                            <p className='text-xl font-normal'>{city.city} </p>
-                            <p className='font-light'>{city.place} </p>
+                            <p className='text-xl font-normal'>{cityTown.city} </p>
+                            <p className='font-light'>{cityTown.place} </p>
                           </div>
                           <svg
                             className="text-gray-500 w-4 h-4 ms-2 rtl:rotate-180"

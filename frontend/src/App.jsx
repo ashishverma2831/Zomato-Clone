@@ -11,7 +11,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/home-restaurants' element={<HomeRestaurants />} />
+          <Route path='/:city/:town' element={<HomeRestaurants />} />
           <Route path='/' element={<Home />} />
           <Route path='/partner-with-us' element={<AddRestaurant />} />
           <Route path='/:city' element={<HomePage />} />
