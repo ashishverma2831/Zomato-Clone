@@ -17,7 +17,7 @@ const HomeRestaurants = () => {
         setActiveTab(tab);
     };
 
-    const {city, town} = useParams();
+    const { city, town } = useParams();
 
     return (
         <>
@@ -25,7 +25,12 @@ const HomeRestaurants = () => {
 
             <section>
                 <div className='max-w-screen-lg mx-auto px-5 py-4 '>
-                    <p className='text-gray-500 text-sm'>Home / India / <span className='capitalize'>{city}</span> / <span className='capitalize'>{town}</span> </p>
+                    <p className='text-gray-500 text-sm'>
+                        <span className='capitalize hover:text-red-600'> Home / </span>
+                        <span className='capitalize hover:text-red-600'> India /  </span>
+                        <span className='capitalize hover:text-red-600'>{city} / </span>
+                        <span className='capitalize text-gray-400'>{town}</span>
+                    </p>
                 </div>
             </section>
 
@@ -35,9 +40,9 @@ const HomeRestaurants = () => {
                     <div onClick={() => { handleTabs("delivery") }} className={activeTab === "delivery" ? 'p-4 text-xl text-red-500 font-semibold flex items-center gap-2 border-b-red-500 border-b-4' : 'p-4 text-xl cursor-pointer text-red-500 font-semibold flex items-center gap-2'}> <div className='p-4 rounded-full bg-[#E5F3F3]'><img className='h-8 w-8' src={activeTab === "delivery" ? 'https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png' : 'https://b.zmtcdn.com/data/o2_assets/246bbd71fbba420d5996452be3024d351616150055.png'} /></div>  Delivery</div>
                     <div onClick={() => { handleTabs("nightlife") }} className={activeTab === "nightlife" ? 'p-4 text-xl text-red-500 font-semibold flex items-center gap-2 border-b-red-500 border-b-4' : 'p-4 text-xl cursor-pointer text-red-500 font-semibold flex items-center gap-2'}> <div className='p-4 rounded-full bg-[#E5F3F3]'><img className='h-8 w-8' src={activeTab === "nightlife" ? 'https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png' : 'https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png'} /></div>  Nightlife</div>
                 </div>
-                    {
-                        activeTab === "dining" ? <DiningOut /> : activeTab === "delivery" ? <Delivery /> : <Nightlife />  
-                    }
+                {
+                    activeTab === "dining" ? <DiningOut /> : activeTab === "delivery" ? <Delivery /> : <Nightlife />
+                }
             </main>
 
             <section className='py-10 text-center'>
