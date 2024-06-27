@@ -28,8 +28,6 @@ const Header = () => {
                 <li>
                   <div>
                     <button
-                      data-modal-target="authentication-modal"
-                      data-modal-toggle="authentication-modal"
                       className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 text-white"
                       type="button"
                       onClick={() => {
@@ -38,7 +36,7 @@ const Header = () => {
                     >
                       Log in
                     </button>
-                    {LogInModal ? <LogIn modalId="authentication-modal" closeFunc={() => { setLogInModal(false) }} func={() => {
+                    {LogInModal ? <LogIn closeFunc={() => { setLogInModal(false) }} func={() => {
                       setLogInModal(false)
                       setSignUpModal(true)
                     }} /> : <></>}
@@ -47,8 +45,6 @@ const Header = () => {
                 <li>
                   <div>
                     <button
-                      data-modal-target="authentication-modal-1"
-                      data-modal-toggle="authentication-modal-1"
                       className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 text-white"
                       type="button"
                       onClick={() => {
@@ -57,7 +53,7 @@ const Header = () => {
                     >
                       Sign up
                     </button>
-                    {SignUpModal ? <SignUp modalId="authentication-modal-1" closeFunc={() => { setSignUpModal(false) }} func={() => {
+                    {SignUpModal ? <SignUp closeFunc={() => { setSignUpModal(false) }} func={() => {
                       setSignUpModal(false)
                       setLogInModal(true)
                     }} /> : <></>}
@@ -129,21 +125,19 @@ const Header = () => {
                 <span className="sr-only ">Close menu</span>
               </button>
               <div className="py-4 overflow-y-auto">
-                <ul className="space-y-2 font-medium">
+                <ul className="font-medium flex flex-col gap-2 ">
                   <li>
                     <NavLink
                       to="partner-with-us"
-                      className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group mt-4"
+                      className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group mt-4"
                     >
-                      <span className="ms-3 text-gray-500 font-normal ">Add restaurant</span>
+                      <span className="text-gray-500 font-normal ">Add restaurant</span>
                     </NavLink>
                   </li>
                   <li>
                     <div>
                       <button
-                        data-modal-target="authentication-modal"
-                        data-modal-toggle="authentication-modal"
-                        className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 text-white"
+                        className="block p-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 font-normal  md:p-0 w-full text-left text-gray-500"
                         type="button"
                         onClick={() => {
                           setLogInModal(true)
@@ -151,7 +145,7 @@ const Header = () => {
                       >
                         Log in
                       </button>
-                      {LogInModal ? <LogIn modalId="authentication-modal" closeFunc={() => { setLogInModal(false) }} func={() => {
+                      {LogInModal ? <LogIn closeFunc={() => { setLogInModal(false) }} func={() => {
                         setLogInModal(false)
                         setSignUpModal(true)
                       }} /> : <></>}
@@ -160,9 +154,7 @@ const Header = () => {
                   <li>
                     <div>
                       <button
-                        data-modal-target="authentication-modal-1"
-                        data-modal-toggle="authentication-modal-1"
-                        className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 text-white"
+                        className="block p-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 font-normal md:p-0 w-full text-left text-gray-500"
                         type="button"
                         onClick={() => {
                           setSignUpModal(true)
@@ -170,7 +162,7 @@ const Header = () => {
                       >
                         Sign up
                       </button>
-                      {SignUpModal ? <SignUp modalId="authentication-modal-1" closeFunc={() => { setSignUpModal(false) }} func={() => {
+                      {SignUpModal ? <SignUp closeFunc={() => { setSignUpModal(false) }} func={() => {
                         setSignUpModal(false)
                         setLogInModal(true)
                       }} /> : <></>}

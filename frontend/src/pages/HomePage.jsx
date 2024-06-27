@@ -261,7 +261,7 @@ const HomePage = () => {
                   if (index !== cityTowns.length - 1 && index < 8) {
                     return (
                       <div key={index}>
-                        <Link to={'/'+city+'/'+cityTown.city.trim().toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                        <Link to={'/'+city+'/'+cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
                           {/* <span className="w-full text-xl font-normal text-black">{city} Restaurants</span> */}
                           <div>
                             <p className='text-xl font-normal'>{cityTown.city} </p>

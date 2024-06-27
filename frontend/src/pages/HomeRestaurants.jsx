@@ -8,6 +8,7 @@ import DiningOut from '../components/DiningOut';
 import Delivery from '../components/Delivery';
 import Nightlife from '../components/Nightlife';
 import HeaderFourth from '../components/HeaderFourth';
+import { useParams } from 'react-router-dom';
 
 const HomeRestaurants = () => {
 
@@ -16,13 +17,15 @@ const HomeRestaurants = () => {
         setActiveTab(tab);
     };
 
+    const {city, town} = useParams();
+
     return (
         <>
             <HeaderFourth />
 
             <section>
                 <div className='max-w-screen-lg mx-auto px-5 py-4 '>
-                    <p className='text-gray-500 text-sm'>Home / India / Chennai / T.Nagar Restaurants</p>
+                    <p className='text-gray-500 text-sm'>Home / India / <span className='capitalize'>{city}</span> / <span className='capitalize'>{town}</span> </p>
                 </div>
             </section>
 

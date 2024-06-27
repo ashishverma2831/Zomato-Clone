@@ -1,10 +1,9 @@
 import React from 'react'
 import 'flowbite';
 
-export const LogIn = ({modalId, closeFunc, func}) => {
+export const LogIn = ({closeFunc, func}) => {
     return (
         <div
-            id={modalId}
             tabIndex={-1}
             aria-hidden="true"
             className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-black bg-opacity-50"
