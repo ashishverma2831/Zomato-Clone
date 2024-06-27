@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { LogIn } from './LogIn';
 import { SignUp } from './SignUp';
+import { Link } from 'react-router-dom';
 
-const HeaderFourth = () => {
+const HeaderFourth = ({city,town}) => {
 
     const [sidebar, setSidebar] = useState(false);
     const [SignUpModal, setSignUpModal] = useState(false)
@@ -61,7 +62,7 @@ const HeaderFourth = () => {
                                 <p className='w-6 h-[3px] rounded bg-slate-800'>  </p>
                             </div>
                         </div>
-                        <p className='text-4xl bold italic font-extrabold'>Zomato</p>
+                        <Link to={'/'+city+'/'+town} className='text-4xl bold italic font-extrabold'>Zomato</Link>
                         <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className='w-full hidden md:block shadow-lg py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border border-gray-200 focus:outline-none outline-none rounded-lg' />
                     </div>
                     <div className='hidden md:block'>
