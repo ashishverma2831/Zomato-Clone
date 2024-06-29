@@ -136,7 +136,7 @@ const HomePage = () => {
     key: 0,
     hidden:false
   });
-  console.log(accordion);
+  // console.log(accordion);
 
   return (
     <>
