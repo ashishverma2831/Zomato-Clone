@@ -118,7 +118,7 @@ const HomePage = () => {
     }
   ]
 
-  const {city} = useParams();
+  const { city } = useParams();
   console.log(city);
   const [activeRadio, setActiveRadio] = useState('email');
   const [hiddenList, setHiddenList] = useState('hidden');
@@ -132,14 +132,11 @@ const HomePage = () => {
     }
   }
 
-  // useEffect(() => {
-  //   window.location.reload();
-  // }, [setTimeout(1000)])
-
-  // setTimeout(() => {
-  //   window.location.reload();
-  // }, 1000)
-
+  const [accordion, setAccordion] = useState({
+    key: 0,
+    hidden:false
+  });
+  console.log(accordion);
 
   return (
     <>
@@ -148,34 +145,6 @@ const HomePage = () => {
       <Section className='max-w-screen-xl mx-auto p-10'>
         <HomeCard cardData={cardData} />
       </Section>
-
-      {/* <Section className='max-w-screen-xl mx-auto p-10'>
-        <div className='w-full'>
-          <p className='text-4xl text-left px-3'>Collections</p>
-          <div className='flex justify-between p-3'>
-            <p className='text-xl text-gray-500'>Explore curated lists of top restaurants, cafes, pubs, and bars in Lucknow, based on trends</p>
-            <p className='flex justify-between'><button className='text-red-500 text-xl'>All collections in Lucknow <i className="text-sm mx-2 fa-solid fa-play"></i></button></p>
-          </div>
-          <div className='p-3 flex gap-4 justify-evenly flex-wrap'>
-            <div className='flex-1 h-[360px] min-w-[240px] flex flex-col text-xl rounded-lg items-start text-white p-5 justify-end bg-center bg-cover bg-[url(https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*)]'>
-              <p>Best insta-worthy places</p>
-              <p>9 places <i className="text-sm mx-2 fa-solid fa-play"></i></p>
-            </div>
-            <div className='flex-1 h-[360px] min-w-[240px] flex flex-col text-xl rounded-lg items-start text-white p-5 justify-end bg-center bg-cover bg-[url(https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*)]'>
-              <p>Best insta-worthy places</p>
-              <p>9 places <i className="text-sm mx-2 fa-solid fa-play"></i></p>
-            </div>
-            <div className='flex-1 h-[360px] min-w-[240px] flex flex-col text-xl rounded-lg items-start text-white p-5 justify-end bg-center bg-cover bg-[url(https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*)]'>
-              <p>Best insta-worthy places</p>
-              <p>9 places <i className="text-sm mx-2 fa-solid fa-play"></i></p>
-            </div>
-            <div className='flex-1 h-[360px] min-w-[240px] flex flex-col text-xl rounded-lg items-start text-white p-5 justify-end bg-center bg-cover bg-[url(https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*)]'>
-              <p>Best insta-worthy places</p>
-              <p>9 places <i className="text-sm mx-2 fa-solid fa-play"></i></p>
-            </div>
-          </div>
-        </div>
-      </Section> */}
 
       <section >
         <div className='max-w-screen-xl mx-auto md:p-8'>
@@ -261,7 +230,7 @@ const HomePage = () => {
                   if (index !== cityTowns.length - 1 && index < 8) {
                     return (
                       <div key={index}>
-                        <Link to={'/'+city+'/'+cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                        <Link to={'/' + city + '/' + cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
                           {/* <span className="w-full text-xl font-normal text-black">{city} Restaurants</span> */}
                           <div>
                             <p className='text-xl font-normal'>{cityTown.city} </p>
@@ -296,7 +265,7 @@ const HomePage = () => {
                   else {
                     return (
                       <div key={index} className={hiddenList}>
-                        <Link to={'/'+city+'/'+cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
+                        <Link to={'/' + city + '/' + cityTown.city.toLowerCase()} className="flex border items-center justify-between p-3 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
                           {/* <span className="w-full text-xl font-normal text-black">{city} Restaurants</span> */}
                           <div>
                             <p className='text-xl font-normal'>{cityTown.city} </p>
@@ -375,6 +344,7 @@ const HomePage = () => {
           >
             <h2 id="accordion-flush-heading-1" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({key:1, hidden:!accordion.hidden})}}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-1"
@@ -401,8 +371,9 @@ const HomePage = () => {
               </button>
             </h2>
             <div
+              key={1}
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 1 && accordion.hidden  ? 'block' : 'hidden'}`}
               id="accordion-flush-body-1"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
               aria-labelledby="accordion-flush-heading-1"
             >
               <div className="p-5 border-gray-200">
@@ -429,6 +400,7 @@ const HomePage = () => {
 
             <h2 id="accordion-flush-heading-2" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({key:2, hidden:!accordion.hidden})}}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-2"
@@ -455,8 +427,9 @@ const HomePage = () => {
               </button>
             </h2>
             <div
+              key={2}
               id="accordion-flush-body-2"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 2 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-2"
             >
               <div className="p-5 border-gray-200">
@@ -483,6 +456,7 @@ const HomePage = () => {
 
             <h2 id="accordion-flush-heading-3" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({key:3, hidden:!accordion.hidden})}}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-3"
@@ -509,8 +483,9 @@ const HomePage = () => {
               </button>
             </h2>
             <div
+              key={3}
               id="accordion-flush-body-3"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 3 && accordion.hidden  ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-3"
             >
               <div className="p-5 border-gray-200">
@@ -528,6 +503,7 @@ const HomePage = () => {
 
             <h2 id="accordion-flush-heading-4" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({key:4, hidden:!accordion.hidden})}}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-4"
@@ -554,11 +530,12 @@ const HomePage = () => {
               </button>
             </h2>
             <div
+              key={4}
               id="accordion-flush-body-4"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-4"
             >
-              <div className="p-5 border-gray-200 ">
+              <div className={`p-5 border-gray-200 rounded-lg`}>
                 <p className=" text-gray-500 text-left flex justify-center gap-4 flex-wrap">
                   {
                     cities.map((city, index) => {
