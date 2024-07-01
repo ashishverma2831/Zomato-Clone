@@ -27,9 +27,9 @@ const Collections = () => {
             </section>
 
             <section>
-                <div className='max-w-screen-xl mx-auto p-5'>
-                    <p className='text-3xl px-8'>Collections - <span className='capitalize'>{city}</span></p>
-                    <p className='px-8 text-gray-500 text-lg font-normal'>Create and browse lists of the finest restaurants</p>
+                <div className='max-w-screen-xl mx-auto px-2 py-5'>
+                    <p className='text-3xl'>Collections - <span className='capitalize'>{city}</span></p>
+                    <p className=' text-gray-500 text-lg font-normal'>Create and browse lists of the finest restaurants</p>
                 </div>
                 <main className='bg-white max-w-screen-xl mx-auto'>
                     <div className='max-w-screen-xl flex flex-wrap mx-auto border-b-2 '>
