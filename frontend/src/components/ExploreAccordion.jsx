@@ -1,6 +1,7 @@
 import React from 'react'
 import { popularCuisines, popularRestuarants, topRestuarants,cities } from '../data/data';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ExploreAccordion = () => {
 
@@ -219,9 +220,16 @@ const ExploreAccordion = () => {
                                 <p className=" text-gray-500 text-left flex justify-center gap-4 flex-wrap">
                                     {
                                         cities.map((city, index) => {
-                                            return (
-                                                <span key={index} className='min-w-[100px] md:min-w-[200px] text-gray-500 hover:text-gray-700 cursor-pointer'> {city} </span>
-                                            )
+                                            if(index!==cities.length-1){
+                                                return (
+                                                    <span key={index} className='min-w-[100px] md:min-w-[200px] text-gray-500 hover:text-gray-700 cursor-pointer'> {city} </span>
+                                                )
+                                            }
+                                            else{
+                                                return (
+                                                    <Link to={'/delivery-cities'} key={index} className='min-w-[100px] md:min-w-[200px] text-black font-semibold cursor-pointer underline underline-offset-8 '> {city} </Link>
+                                                )
+                                            }
                                         })
                                     }
                                 </p>

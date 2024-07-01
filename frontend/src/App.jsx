@@ -5,6 +5,7 @@ import AddRestaurant from './pages/AddRestaurant'
 import Error404 from './pages/Error404'
 import HomePage from './pages/HomePage'
 import HomeRestaurants from './pages/HomeRestaurants'
+import DeliverCities from './pages/DeliverCities'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/partner-with-us' element={<AddRestaurant />} />
           <Route path='/:city' element={<HomePage />} />
+          <Route path='/delivery-cities' element={<DeliverCities />} />
           <Route path='*' element={<Error404 />} />
         </Routes>
       </BrowserRouter>
