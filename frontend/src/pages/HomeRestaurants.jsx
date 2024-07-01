@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
 import RestaurantCard from '../components/RestaurantCard';
 import FilterButton from '../components/FilterButton';
@@ -18,6 +18,18 @@ const HomeRestaurants = () => {
   };
 
   const { city, town } = useParams();
+  
+  // useEffect(()=>{
+  //   if(activeTab === "dining"){
+  //     window.location=`/${city}/dine-out-in-${town}`
+  //   }
+  //   else if(activeTab === "delivery"){
+  //     window.location=`/${city}/delivery-in-${town}`
+  //   }
+  //   else if(activeTab === "nightlife"){
+  //     window.location=`/${city}/nightlife-in-${town}`
+  //   }
+  // },[activeTab])
 
   return (
     <>

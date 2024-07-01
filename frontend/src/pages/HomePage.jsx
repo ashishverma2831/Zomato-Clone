@@ -125,7 +125,7 @@ const HomePage = () => {
 
   return (
     <>
-      <HeaderThird />
+      <HeaderThird city={city} />
 
       <Section className='max-w-screen-xl mx-auto p-10'>
         <HomeCard cardData={cardData} />
