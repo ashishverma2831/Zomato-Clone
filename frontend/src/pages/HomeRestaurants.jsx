@@ -41,7 +41,7 @@ const HomeRestaurants = () => {
           <div onClick={() => { handleTabs("nightlife") }} className={activeTab === "nightlife" ? 'p-4 text-xl text-red-500 font-semibold flex items-center gap-2 border-b-red-500 border-b-4' : 'p-4 text-xl cursor-pointer text-red-500 font-semibold flex items-center gap-2'}> <div className='p-4 rounded-full bg-[#E5F3F3]'><img className='h-8 w-8' src={activeTab === "nightlife" ? 'https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png' : 'https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png'} /></div>  Nightlife</div>
         </div>
         {
-          activeTab === "dining" ? <DiningOut /> : activeTab === "delivery" ? <Delivery /> : <Nightlife />
+          activeTab === "dining" ? <DiningOut city={city} town={town} /> : activeTab === "delivery" ? <Delivery city={city} town={town} /> : <Nightlife city={city} town={town}/>
         }
       </main>
 

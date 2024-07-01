@@ -3,7 +3,7 @@ import RestaurantCard from './RestaurantCard'
 import FilterButton from './FilterButton'
 import Carousel from 'react-multi-carousel'
 
-const Delivery = () => {
+const Delivery = ({city,town}) => {
 
   const filters = [
     'Filters', 'Offers', 'Serves Alcohol', 'Open now'
