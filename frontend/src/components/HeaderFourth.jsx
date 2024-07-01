@@ -62,7 +62,7 @@ const HeaderFourth = ({city,town}) => {
                                 <p className='w-6 h-[3px] rounded bg-slate-800'>  </p>
                             </div>
                         </div>
-                        <Link to={'/'+city+'/'+town} className='text-4xl bold italic font-extrabold'>Zomato</Link>
+                        <Link to={city===undefined || town===undefined ?'/':'/'+city+'/'+town} className='text-4xl bold italic font-extrabold'>Zomato</Link>
                         <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className='w-full hidden md:block shadow-lg py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border border-gray-200 focus:outline-none outline-none rounded-lg' />
                     </div>
                     <div className='hidden md:block'>
