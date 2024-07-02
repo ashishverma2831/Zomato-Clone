@@ -32,7 +32,7 @@ const DiningOut = ({city,town}) => {
                 <div className='py-5 px-10 max-w-screen-xl mx-auto '>
                     <p className='px-2 text-4xl font-normal'>T. Nagar Restaurants, Chennai</p>
                     <div className='flex flex-wrap py-5 gap-2 md:gap-6'>
-                        <RestaurantCard />
+                        <RestaurantCard city={city} town={town} />
                         <RestaurantCard />
                         <RestaurantCard />
                         <RestaurantCard />

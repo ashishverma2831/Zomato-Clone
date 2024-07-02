@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import HomeRestaurants from './pages/HomeRestaurants'
 import DeliverCities from './pages/DeliverCities'
 import Collections from './pages/Collections'
+import RestaurantDetail from './pages/RestaurantDetail'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/:city' element={<HomePage />} />
           <Route path='/delivery-cities' element={<DeliverCities />} />
           <Route path='/:city/collections' element={<Collections />} />
+          <Route path='/:city/:town/:restaurant' element={<RestaurantDetail />} />
           <Route path='*' element={<Error404 />} />
         </Routes>
       </BrowserRouter>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const RestaurantCard = () => {
+const RestaurantCard = ({city,town}) => {
   return (
     <>
-        <div className='w-[330px] cursor-pointer flex-1 hover:flex-3 bg-transparent hover:border hover:bg-white hover:shadow-lg p-2 hover:rounded-xl'>
+        <Link to={'/'+city+'/'+town+'/punjabi-tadka'} className='w-[330px] cursor-pointer flex-1 hover:flex-3 bg-transparent hover:border hover:bg-white hover:shadow-lg p-2 hover:rounded-xl'>
             <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
             <div className='flex flex-col py-2'>
                 <div className=' flex justify-between items-center '>
@@ -20,7 +21,7 @@ const RestaurantCard = () => {
                     <p className='text-gray-500'>3.7 Km</p>
                 </div>
             </div>
-        </div>
+        </Link>
     </>
   )
 }
