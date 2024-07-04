@@ -3,6 +3,13 @@ import HeaderFourth from '../components/HeaderFourth'
 import Footer from '../components/Footer'
 import { useParams, Link } from 'react-router-dom'
 import { useState } from 'react'
+import { act } from 'react'
+import Overview from '../components/Overview'
+import OrderOnline from '../components/OrderOnline'
+import Review from '../components/Review'
+import Photos from '../components/Photos'
+import Menu from '../components/Menu'
+import BookTable from '../components/BookTable'
 
 const RestaurantDetail = () => {
 
@@ -73,16 +80,6 @@ const RestaurantDetail = () => {
                 </div>
             </section>
 
-            <section>
-                <div className='max-w-screen-lg mx-auto px-5 py-4 '>
-                    <p className='text-gray-500 text-sm'>
-                        <Link to={'/' + city + '/' + town} className='capitalize hover:text-red-600'> Home / </Link>
-                        <Link to={'/'} className='capitalize hover:text-red-600'> India /  </Link>
-                        <Link to={'/' + city} className='capitalize hover:text-red-600'>{city} / </Link>
-                        <span className='capitalize text-gray-400'>{town}</span>
-                    </p>
-                </div>
-            </section>
 
             <main className='bg-white'>
                 <div className='max-w-screen-xl flex flex-wrap mx-auto border-b-2 '>
@@ -93,9 +90,21 @@ const RestaurantDetail = () => {
                     <div onClick={() => { handleTabs("menu") }} className={activeTab === "menu" ? 'p-4 text-xl text-red-500 font-normal flex items-center gap-2 border-b-red-500 border-b-2' : 'p-4 text-xl cursor-pointer text-gray-500 font-normal flex items-center gap-2'}> Menu </div>
                     <div onClick={() => { handleTabs("book-table") }} className={activeTab === "book-table" ? 'p-4 text-xl text-red-500 font-normal flex items-center gap-2 border-b-red-500 border-b-2' : 'p-4 text-xl cursor-pointer text-gray-500 font-normal flex items-center gap-2'}> Book a Table </div>
                 </div>
+                <div className='max-w-screen-xl py-2 mx-auto'>
                 {
-                   
+                    activeTab === 'overview'?
+                    <Overview />:
+                    activeTab === 'order-online'?
+                    <OrderOnline />:
+                    activeTab === 'review'?
+                    <Review />:
+                    activeTab === 'photos'?
+                    <Photos />:
+                    activeTab === 'menu'?
+                    <Menu />:
+                    <BookTable />
                 }
+                </div>
             </main>
 
             <Footer />
