@@ -19,7 +19,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
             <div className='flex justify-between gap-4'>
                 <div className='flex-1 flex flex-col gap-8'>
                     <div>
-                        <p className='text-2xl font-normal'>About this place</p>
+                        <p className='text-2xl font-semibold'>About this place</p>
                         <div className='flex gap-4 my-4'>
                             <div style={{ boxShadow: '0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11)' }} className='bg-white rounded-xl cursor-pointer  flex p-2 justify-between items-center gap-2'>
                                 <img className='w-12' src='https://b.zmtcdn.com/data/o2_assets/ebd42529c3342bdaf8b624a63a571fcc1585754330.png' />
