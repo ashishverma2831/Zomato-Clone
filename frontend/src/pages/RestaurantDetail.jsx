@@ -37,7 +37,7 @@ const RestaurantDetail = () => {
             </section>
 
             <section>
-                <div className='max-w-screen-xl px-5 mx-auto flex flex-col gap-4'>
+                <div className=' max-w-screen-xl px-5 mx-auto flex flex-col gap-4'>
                     <div className='grid grid-cols-4 gap-2 grid-rows-2 h-[340px]'>
                         {/* <img className='col-span-2 row-span-2 p-5 bg-red-600' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' /> */}
                         {/* <img className='col-start-3 p-5 bg-gray-600' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' /> */}
@@ -48,6 +48,7 @@ const RestaurantDetail = () => {
                         <div className='row-span-2 '><div className='h-full cursor-pointer bg-center bg-cover bg-no-repeat bg-[url(https://b.zmtcdn.com/data/pictures/3/18614733/b3eba44432334bec3b99ee26b696eb05.jpg?fit=around|300:273&crop=300:273;*,*)]  relative '><p className='bg-gray-800 opacity-60 items-center flex justify-center h-full absolute w-full text-white'>View Gallery</p></div></div>
                         <div className='overflow-hidden'><div className='h-full cursor-pointer hover:scale-110 bg-center transition-all duration-1000  bg-cover bg-no-repeat bg-[url(https://b.zmtcdn.com/data/pictures/3/18614733/abf31a6e5d445751013ba8512968cf8b.jpg?fit=around|300:273&crop=300:273;*,*)]'></div></div>
                     </div>
+                    <div className=' gap-2 flex flex-col'>
                     <div className='flex justify-between items-center'>
                         <p className='text-4xl'>Garden Grille & Bar - Hilton Garden Inn</p>
                         <div className='flex gap-4'>
@@ -77,6 +78,7 @@ const RestaurantDetail = () => {
                         <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-regular fa-bookmark"></i> Bookmark</Link>
                         <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-solid fa-share"></i>Share</Link>
                     </div>
+                    </div>
                 </div>
             </section>
 
@@ -93,7 +95,7 @@ const RestaurantDetail = () => {
                 <div className='max-w-screen-xl py-2 mx-auto'>
                 {
                     activeTab === 'overview'?
-                    <Overview />:
+                    <Overview activeTab={activeTab} setActiveTab={setActiveTab} handleTabs={handleTabs}/>:
                     activeTab === 'order-online'?
                     <OrderOnline />:
                     activeTab === 'review'?

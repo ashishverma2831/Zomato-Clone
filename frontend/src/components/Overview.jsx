@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import RestaurantCard from './RestaurantCard';
 
-const Overview = () => {
+const Overview = ({handleTabs,activeTab,setActiveTab}) => {
 
     const cuisines = ["North Indian", "Chinese", "Fast Food", "Beverages", "Asian", "Mughlai"];
     const moreInfo = [
@@ -10,10 +10,10 @@ const Overview = () => {
         'Live Sports Screening', 'Outdoor Seating', 'Live Music', 'Nightlife', 'Wifi', 'Valet Parking', 'Smoking Area',
     ]
     const reviews = [
-        'Dessert Platter','Hot N Sour Soup','Grilled Chicken Steak','Buffet','Desserts','Sweets','Excellent Variety','Extensive Bar Menu','Ample Seating Area','Relaxed Atmosphere','Variety of Veg Options','Good for Large Groups'
+        'Dessert Platter', 'Hot N Sour Soup', 'Grilled Chicken Steak', 'Buffet', 'Desserts', 'Sweets', 'Excellent Variety', 'Extensive Bar Menu', 'Ample Seating Area', 'Relaxed Atmosphere', 'Variety of Veg Options', 'Good for Large Groups'
     ]
     const relatedRestaurants = [
-        'Restaurants in Double Tree by Hilton Gomti Nagar', 'Restaurants in Lucknow',' Lucknow Restaurants', 'Gomti Nagar restaurants', 'Best Gomti Nagar restaurants', 'East Lucknow restaurants', 'Casual Dining in Lucknow', 'Casual Dining near me', 'Casual Dining in Gomti Nagar', 'Bar in Lucknow', 'Bar near me', 'Bar in Gomti Nagar', 'in Lucknow', 'near me', 'in Gomti Nagar', 'Order food online in Gomti Nagar', 'Order food online in Lucknow'
+        'Restaurants in Double Tree by Hilton Gomti Nagar', 'Restaurants in Lucknow', ' Lucknow Restaurants', 'Gomti Nagar restaurants', 'Best Gomti Nagar restaurants', 'East Lucknow restaurants', 'Casual Dining in Lucknow', 'Casual Dining near me', 'Casual Dining in Gomti Nagar', 'Bar in Lucknow', 'Bar near me', 'Bar in Gomti Nagar', 'in Lucknow', 'near me', 'in Gomti Nagar', 'Order food online in Gomti Nagar', 'Order food online in Lucknow'
     ]
     const aroundThePlace = [
         'Patrakar Puram restaurants', 'Indira Nagar restaurants', 'Nishatganj restaurants', 'Mahanagar restaurants'
@@ -97,35 +97,35 @@ const Overview = () => {
                             <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
-                                        <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
+                                    <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
                                     <div className='flex items-center'>
                                         <div className='flex gap-2 border-r-2 border-gray-400 pr-4'>
-                                        <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                         <div className='flex gap-2 pl-4'>
-                                        <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                     </div>
-                                        <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
+                                    <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
                             <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
-                                        <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
+                                    <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
                                     <div className='flex items-center'>
                                         <div className='flex gap-2 border-r-2 border-gray-400 pr-4'>
-                                        <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                         <div className='flex gap-2 pl-4'>
-                                        <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                     </div>
-                                        <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
+                                    <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
                         </div>
@@ -136,35 +136,35 @@ const Overview = () => {
                             <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
-                                        <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
+                                    <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
                                     <div className='flex items-center'>
                                         <div className='flex gap-2 border-r-2 border-gray-400 pr-4'>
-                                        <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                         <div className='flex gap-2 pl-4'>
-                                        <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                     </div>
-                                        <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
+                                    <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
                             <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
-                                        <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
+                                    <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
                                     <div className='flex items-center'>
                                         <div className='flex gap-2 border-r-2 border-gray-400 pr-4'>
-                                        <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                         <div className='flex gap-2 pl-4'>
-                                        <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                        <p>Dining</p>
+                                            <p className='w-fit flex items-baseline bg-green-400 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                            <p>Dining</p>
                                         </div>
                                     </div>
-                                        <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
+                                    <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
                         </div>
@@ -179,24 +179,81 @@ const Overview = () => {
                             })}
                         </div>
                     </div>
+
+                    {/* Reviews */}
+                    <section>
+                        <div className='pb-5 border-b-2 flex flex-col gap-4'>
+                            <div className='flex justify-between'>
+                                <div className='flex gap-3 items-center'>
+                                    <img className='w-11 rounded-full' src='https://b.zmtcdn.com/data/user_profile_pictures/bd6/47ae0778e65f05ca1917988d961f1bd6.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A' />
+                                    <div className='flex flex-col'>
+                                        <p className='text-gray-950 font-semibold text-md'>Megha</p>
+                                        <p className='text-sm text-gray-400'>0 reviews <span className='font-bold text-gray-400'>.</span> 725 Followers</p>
+                                    </div>
+                                </div>
+                                <button className='border border-red-500 text-lg rounded px-4 py-1 font-light text-red-500'>Follow</button>
+                            </div>
+                            <div className='flex gap-4 font-light'>
+                                <div className='flex gap-2 border-gray-400'>
+                                    <p className='w-fit flex items-center bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                    <p>Dining</p>
+                                </div>
+                                <p className='text-gray-400 '>May 18,2022</p>
+                            </div>
+                            <div>
+                                <p className='uppercase font-semibold text-[14px] text-green-500'><i className="mr-1 fa-solid fa-thumbs-up"></i><span>positive</span></p>
+                                <div className='flex my-2 gap-2 flex-wrap'>
+                                    <p className='bg-gray-300/50 text-gray-600 w-fit px-4 py-2 rounded-full text-[13px]'>delicious food</p>
+                                </div>
+                                <p className='uppercase font-semibold text-[14px] text-red-500'><i className="mr-1 fa-solid fa-thumbs-up rotate-180"></i><span>negative</span></p>
+                                <div className='flex my-2 gap-2 flex-wrap'>
+                                    <p className='bg-gray-300/50 text-gray-600 w-fit px-4 py-2 rounded-full text-[13px]'>horrible experience</p>
+                                    <p className='bg-gray-300/50 text-gray-600 w-fit px-4 py-2 rounded-full text-[13px]'>management</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p className=' text-gray-600'>Recently Hilton Garden Inn Lucknow launched a food-fest to relive the raunak and zayka of Shaam-e-awadh where you can enjoy the same authentic flavor of the famous dishes of Lucknow.<br />
+                                    There was a large variety of dishes for both vegetarian and non-vegetarian like mushroom karare, rajma ki galawati, makhmali paneer, murgh ke parchey, kakori kebab, galawati kebab, and many more.<br /> All these dishes were prepared by MasterChef Shahnawaz Qureshi, from the 4th generation of the renowned Qureshi family.
+                                    The food-fest is open for dinner every Saturday from 7 pm to 11 pm</p>
+                            </div>
+                            <div>
+                                <div className='flex flex-wrap justify-start gap-2'>
+                                    <div className='rounded cursor-pointer overflow-hidden transition-all duration-1000'><div className='w-[200px] h-[200px] transition-all duration-1000 bg-center bg-cover hover:scale-110 bg-no-repeat rounded bg-[url(https://b.zmtcdn.com/data/reviews_photos/2ef/0e7e1a503ccc3c7357e1be6eaf2592ef_1605062839.jpg?output-format=webp)]' /></div>
+                                    <div className='rounded cursor-pointer overflow-hidden transition-all duration-1000'><div className='w-[200px] h-[200px] transition-all duration-1000 bg-center bg-cover hover:scale-110 bg-no-repeat rounded bg-[url(https://b.zmtcdn.com/data/reviews_photos/2ef/0e7e1a503ccc3c7357e1be6eaf2592ef_1605062839.jpg?output-format=webp)]' /></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className='text-gray-400 font-light text-lg'>5 Votes for helpful, 1 Comment</p>
+                            </div>
+                            <div>
+                                <div className='flex items-center gap-2 w-1/3 justify-between text-gray-400 font-light'>
+                                    <p><i className="mr-1 fa-regular fa-thumbs-up"></i><span>Helpful</span></p>
+                                    <p><i class="mr-1 fa-regular fa-comment"></i><span>Comment</span></p>
+                                    <p><i class="mr-1 fa-solid fa-share"></i><span>Share</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p className='flex justify-between mt-4' onClick={()=>{setActiveTab('review')}}><Link className='text-red-500 text-[16px]'>View all reviews <i className="text-[14px] mx-2 fa-solid fa-play"></i></Link></p>
+                    </section>
+
                     <div className='flex flex-col gap-1 border-b-2 pb-4'>
-                        <p className='uppercase' style={{letterSpacing:'4px',wordSpacing:'4px'}}>Help Us Make zomato better</p>
+                        <p className='uppercase' style={{ letterSpacing: '4px', wordSpacing: '4px' }}>Help Us Make zomato better</p>
                         <p className='font-semibold text-xl '>Report an error in this listing</p>
                         <p className='text-sm text-gray-500'>Help us make Zomato more updated and relevant for everyone</p>
                         <p className='flex justify-between '><Link className='text-red-500 text-[16px]'>Report now <i className="text-[14px] mx-2 fa-solid fa-play"></i></Link></p>
                     </div>
                     <div>
                         <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{wordSpacing:'4px',letterSpacing:'1px'}}>RELATED TO GARDEN GRILLE & BAR - HILTON GARDEN INN, GOMTI NAGAR</p>
+                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RELATED TO GARDEN GRILLE & BAR - HILTON GARDEN INN, GOMTI NAGAR</p>
                             <div>
                                 {
-                                    relatedRestaurants.map((res,index)=>{
-                                        if(index!==relatedRestaurants.length-1){
+                                    relatedRestaurants.map((res, index) => {
+                                        if (index !== relatedRestaurants.length - 1) {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                             )
                                         }
-                                        else{
+                                        else {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                             )
@@ -206,16 +263,16 @@ const Overview = () => {
                             </div>
                         </div>
                         <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{wordSpacing:'4px',letterSpacing:'1px'}}>RESTAURANTS AROUND GOMTI NAGAR</p>
+                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RESTAURANTS AROUND GOMTI NAGAR</p>
                             <div>
                                 {
-                                    aroundThePlace.map((res,index)=>{
-                                        if(index!==aroundThePlace.length-1){
+                                    aroundThePlace.map((res, index) => {
+                                        if (index !== aroundThePlace.length - 1) {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                             )
                                         }
-                                        else{
+                                        else {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                             )
@@ -225,16 +282,16 @@ const Overview = () => {
                             </div>
                         </div>
                         <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{wordSpacing:'4px',letterSpacing:'1px'}}>FREQUENT SEARCHES LEADING TO THIS PAGE</p>
+                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>FREQUENT SEARCHES LEADING TO THIS PAGE</p>
                             <div>
                                 {
-                                    frequentRestaurants.map((res,index)=>{
-                                        if(index!==frequentRestaurants.length-1){
+                                    frequentRestaurants.map((res, index) => {
+                                        if (index !== frequentRestaurants.length - 1) {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                             )
                                         }
-                                        else{
+                                        else {
                                             return (
                                                 <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                             )
