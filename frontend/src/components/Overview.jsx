@@ -245,7 +245,7 @@ const Overview = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-[340px]'>
+                <div className='w-[340px] h-full sticky top-10' >
                     <img src='https://b.zmtcdn.com/data/o2_assets/28c43f9f8429ea034ffad3782e6b846f1716307842.png' />
                     <div className='p-3 mt-4 flex flex-col gap-1 bg-white rounded-xl shadow-2xl'>
                         <p className='text-xl'>Call</p>
