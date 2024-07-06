@@ -12,15 +12,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
     const reviews = [
         'Dessert Platter', 'Hot N Sour Soup', 'Grilled Chicken Steak', 'Buffet', 'Desserts', 'Sweets', 'Excellent Variety', 'Extensive Bar Menu', 'Ample Seating Area', 'Relaxed Atmosphere', 'Variety of Veg Options', 'Good for Large Groups'
     ]
-    const relatedRestaurants = [
-        'Restaurants in Double Tree by Hilton Gomti Nagar', 'Restaurants in Lucknow', ' Lucknow Restaurants', 'Gomti Nagar restaurants', 'Best Gomti Nagar restaurants', 'East Lucknow restaurants', 'Casual Dining in Lucknow', 'Casual Dining near me', 'Casual Dining in Gomti Nagar', 'Bar in Lucknow', 'Bar near me', 'Bar in Gomti Nagar', 'in Lucknow', 'near me', 'in Gomti Nagar', 'Order food online in Gomti Nagar', 'Order food online in Lucknow'
-    ]
-    const aroundThePlace = [
-        'Patrakar Puram restaurants', 'Indira Nagar restaurants', 'Nishatganj restaurants', 'Mahanagar restaurants'
-    ]
-    const frequentRestaurants = [
-        'hilton garden inn lucknow restaurant', 'garden grill lucknow', 'hilton garden inn lucknow buffet price', 'hilton garden inn menu', 'menu for hilton garden inn lucknow'
-    ]
+    
 
     return (
         <>
@@ -241,65 +233,6 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                         <p className='font-semibold text-xl '>Report an error in this listing</p>
                         <p className='text-sm text-gray-500'>Help us make Zomato more updated and relevant for everyone</p>
                         <p className='flex justify-between '><Link className='text-red-500 text-[16px]'>Report now <i className="text-[14px] mx-2 fa-solid fa-play"></i></Link></p>
-                    </div>
-                    <div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RELATED TO GARDEN GRILLE & BAR - HILTON GARDEN INN, GOMTI NAGAR</p>
-                            <div>
-                                {
-                                    relatedRestaurants.map((res, index) => {
-                                        if (index !== relatedRestaurants.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RESTAURANTS AROUND GOMTI NAGAR</p>
-                            <div>
-                                {
-                                    aroundThePlace.map((res, index) => {
-                                        if (index !== aroundThePlace.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>FREQUENT SEARCHES LEADING TO THIS PAGE</p>
-                            <div>
-                                {
-                                    frequentRestaurants.map((res, index) => {
-                                        if (index !== frequentRestaurants.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
-                                }
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className='w-[340px] h-full sticky top-10' >
