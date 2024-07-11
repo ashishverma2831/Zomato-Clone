@@ -59,35 +59,35 @@ const RestaurantDetail = () => {
                         <div className='overflow-hidden'><div className='h-full cursor-pointer hover:scale-110 bg-center transition-all duration-1000  bg-cover bg-no-repeat bg-[url(https://b.zmtcdn.com/data/pictures/3/18614733/abf31a6e5d445751013ba8512968cf8b.jpg?fit=around|300:273&crop=300:273;*,*)]'></div></div>
                     </div>
                     <div className=' gap-2 flex flex-col'>
-                    <div className='flex justify-between items-center'>
-                        <p className='text-4xl'>Garden Grille & Bar - Hilton Garden Inn</p>
-                        <div className='flex gap-4'>
-                            <p className='flex items-center gap-2'>
-                                <p className=' flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                <p className='border-b border-dashed'>
-                                    <p className='font-semibold'>289</p>
-                                    <p>Dining Ratings</p>
+                        <div className='flex justify-between items-center'>
+                            <p className='text-4xl'>Garden Grille & Bar - Hilton Garden Inn</p>
+                            <div className='flex gap-4'>
+                                <p className='flex items-center gap-2'>
+                                    <p className=' flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                    <p className='border-b border-dashed'>
+                                        <p className='font-semibold'>289</p>
+                                        <p>Dining Ratings</p>
+                                    </p>
                                 </p>
-                            </p>
-                            <p className='flex items-center gap-2'>
-                                <p className=' flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
-                                <p className='border-b border-dashed'>
-                                    <p className='font-semibold'>289</p>
-                                    <p>Delivery Ratings</p>
+                                <p className='flex items-center gap-2'>
+                                    <p className=' flex items-baseline bg-green-500 text-sm text-white font-bold gap-1 py-[0.5px] px-1 rounded-md'>3.6 <i className="fa-solid fa-star text-[8px]"></i></p>
+                                    <p className='border-b border-dashed'>
+                                        <p className='font-semibold'>289</p>
+                                        <p>Delivery Ratings</p>
+                                    </p>
                                 </p>
-                            </p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <p>North Indian, Asian, Mughlai, Fast Food, Desserts, Ice Cream</p>
-                        <p className='text-gray-500'>Double Tree by Hilton Gomti Nagar, Lucknow</p>
-                        <p><span className='text-red-400'>Open now </span> - 7am – 11pm (Today)</p>
-                    </div>
-                    <div className='flex justify-start gap-4 py-2'>
-                        <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-solid fa-diamond-turn-right"></i>Direction</Link>
-                        <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-regular fa-bookmark"></i> Bookmark</Link>
-                        <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-solid fa-share"></i>Share</Link>
-                    </div>
+                        <div>
+                            <p>North Indian, Asian, Mughlai, Fast Food, Desserts, Ice Cream</p>
+                            <p className='text-gray-500'>Double Tree by Hilton Gomti Nagar, Lucknow</p>
+                            <p><span className='text-red-400'>Open now </span> - 7am – 11pm (Today)</p>
+                        </div>
+                        <div className='flex justify-start gap-4 py-2'>
+                            <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-solid fa-diamond-turn-right"></i>Direction</Link>
+                            <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-regular fa-bookmark"></i> Bookmark</Link>
+                            <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-solid fa-share"></i>Share</Link>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -103,80 +103,80 @@ const RestaurantDetail = () => {
                     <div onClick={() => { handleTabs("book-table") }} className={activeTab === "book-table" ? 'p-4 text-xl text-red-500 font-normal flex items-center gap-2 border-b-red-500 border-b-2' : 'p-4 text-xl cursor-pointer text-gray-500 font-normal flex items-center gap-2'}> Book a Table </div>
                 </div>
                 <div className='max-w-screen-xl py-2 mx-auto'>
-                {
-                    activeTab === 'overview'?
-                    <Overview activeTab={activeTab} setActiveTab={setActiveTab} handleTabs={handleTabs}/>:
-                    activeTab === 'order-online'?
-                    <OrderOnline />:
-                    activeTab === 'review'?
-                    <Review />:
-                    activeTab === 'photos'?
-                    <Photos />:
-                    activeTab === 'menu'?
-                    <Menu />:
-                    <BookTable />
-                }
+                    {
+                        activeTab === 'overview' ?
+                            <Overview activeTab={activeTab} setActiveTab={setActiveTab} handleTabs={handleTabs} /> :
+                            activeTab === 'order-online' ?
+                                <OrderOnline /> :
+                                activeTab === 'review' ?
+                                    <Review /> :
+                                    activeTab === 'photos' ?
+                                        <Photos /> :
+                                        activeTab === 'menu' ?
+                                            <Menu /> :
+                                            <BookTable />
+                    }
                 </div>
             </main>
-            <div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RELATED TO GARDEN GRILLE & BAR - HILTON GARDEN INN, GOMTI NAGAR</p>
-                            <div>
-                                {
-                                    relatedRestaurants.map((res, index) => {
-                                        if (index !== relatedRestaurants.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
+            <div className='max-w-screen-xl mx-auto'>
+                <div className='mb-6'>
+                    <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RELATED TO GARDEN GRILLE & BAR - HILTON GARDEN INN, GOMTI NAGAR</p>
+                    <div>
+                        {
+                            relatedRestaurants.map((res, index) => {
+                                if (index !== relatedRestaurants.length - 1) {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                    )
                                 }
-                            </div>
-                        </div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RESTAURANTS AROUND GOMTI NAGAR</p>
-                            <div>
-                                {
-                                    aroundThePlace.map((res, index) => {
-                                        if (index !== aroundThePlace.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
+                                else {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                    )
                                 }
-                            </div>
-                        </div>
-                        <div className='mb-6'>
-                            <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>FREQUENT SEARCHES LEADING TO THIS PAGE</p>
-                            <div>
-                                {
-                                    frequentRestaurants.map((res, index) => {
-                                        if (index !== frequentRestaurants.length - 1) {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
-                                            )
-                                        }
-                                        else {
-                                            return (
-                                                <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
-                                            )
-                                        }
-                                    })
-                                }
-                            </div>
-                        </div>
+                            })
+                        }
                     </div>
+                </div>
+                <div className='mb-6'>
+                    <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>RESTAURANTS AROUND GOMTI NAGAR</p>
+                    <div>
+                        {
+                            aroundThePlace.map((res, index) => {
+                                if (index !== aroundThePlace.length - 1) {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                    )
+                                }
+                                else {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                </div>
+                <div className='mb-6'>
+                    <p className='uppercase font-medium my-1' style={{ wordSpacing: '4px', letterSpacing: '1px' }}>FREQUENT SEARCHES LEADING TO THIS PAGE</p>
+                    <div>
+                        {
+                            frequentRestaurants.map((res, index) => {
+                                if (index !== frequentRestaurants.length - 1) {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                    )
+                                }
+                                else {
+                                    return (
+                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
 
             <Footer />
         </>
