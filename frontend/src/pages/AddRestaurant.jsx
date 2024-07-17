@@ -8,6 +8,11 @@ import '../App.css'
 
 const AddRestaurant = () => {
 
+  const [accordion, setAccordion] = useState({
+    key: 0,
+    hidden: false
+  });
+
   const data = [
     {
       title: 'Restaurant Partner app',
@@ -159,6 +164,7 @@ const AddRestaurant = () => {
           >
             <h2 id="accordion-flush-heading-1" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({ key: 1, hidden: !accordion.hidden }) }}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-1"
@@ -185,8 +191,9 @@ const AddRestaurant = () => {
               </button>
             </h2>
             <div
+            key={1}
               id="accordion-flush-body-1"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-1"
             >
               <div className="p-5 border-gray-200">
@@ -198,6 +205,7 @@ const AddRestaurant = () => {
 
             <h2 id="accordion-flush-heading-2" className='mb-4 shadow-sm'>
               <button
+              onClick={() => { setAccordion({ key: 2, hidden: !accordion.hidden }) }}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-2"
@@ -224,8 +232,9 @@ const AddRestaurant = () => {
               </button>
             </h2>
             <div
+            key={2}
               id="accordion-flush-body-2"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 2 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-2"
             >
               <div className="p-5 border-gray-200">
@@ -237,6 +246,7 @@ const AddRestaurant = () => {
 
             <h2 id="accordion-flush-heading-3" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({ key: 3, hidden: !accordion.hidden }) }}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-3"
@@ -263,8 +273,9 @@ const AddRestaurant = () => {
               </button>
             </h2>
             <div
+            key={3}
               id="accordion-flush-body-3"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 3 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-3"
             >
               <div className="p-5 border-gray-200">
@@ -276,6 +287,7 @@ const AddRestaurant = () => {
 
             <h2 id="accordion-flush-heading-4" className='mb-4 shadow-sm'>
               <button
+                onClick={() => { setAccordion({ key: 4, hidden: !accordion.hidden }) }}
                 type="button"
                 className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
                 data-accordion-target="#accordion-flush-body-4"
@@ -302,8 +314,9 @@ const AddRestaurant = () => {
               </button>
             </h2>
             <div
+              key={4}
               id="accordion-flush-body-4"
-              className="hidden border rounded-lg -translate-y-4 shadow-sm"
+              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-4"
             >
               <div className="p-5 border-gray-200">
