@@ -128,7 +128,7 @@ const HomePage = () => {
       <HeaderThird city={city} />
 
       <Section className='max-w-screen-xl mx-auto p-10'>
-        <HomeCard cardData={cardData} />
+        <HomeCard cardData={cardData} city={city} />
       </Section>
 
       <CollectionComponent city={city} />

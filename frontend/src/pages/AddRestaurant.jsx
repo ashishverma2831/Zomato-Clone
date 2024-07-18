@@ -193,7 +193,7 @@ const AddRestaurant = () => {
             <div
             key={1}
               id="accordion-flush-body-1"
-              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 1 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-1"
             >
               <div className="p-5 border-gray-200">
@@ -234,7 +234,7 @@ const AddRestaurant = () => {
             <div
             key={2}
               id="accordion-flush-body-2"
-              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 2 && accordion.hidden ? 'block' : 'hidden'}`}
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 2 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-2"
             >
               <div className="p-5 border-gray-200">
@@ -275,7 +275,7 @@ const AddRestaurant = () => {
             <div
             key={3}
               id="accordion-flush-body-3"
-              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 3 && accordion.hidden ? 'block' : 'hidden'}`}
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 3 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-3"
             >
               <div className="p-5 border-gray-200">
@@ -316,7 +316,7 @@ const AddRestaurant = () => {
             <div
               key={4}
               id="accordion-flush-body-4"
-              className={`hidden border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
+              className={`border rounded-lg -translate-y-4 shadow-sm ${accordion.key === 4 && accordion.hidden ? 'block' : 'hidden'}`}
               aria-labelledby="accordion-flush-heading-4"
             >
               <div className="p-5 border-gray-200">
