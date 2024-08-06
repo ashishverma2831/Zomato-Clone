@@ -126,12 +126,12 @@ const RestaurantDetail = () => {
                             relatedRestaurants.map((res, index) => {
                                 if (index !== relatedRestaurants.length - 1) {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                     )
                                 }
                                 else {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                     )
                                 }
                             })
@@ -145,12 +145,12 @@ const RestaurantDetail = () => {
                             aroundThePlace.map((res, index) => {
                                 if (index !== aroundThePlace.length - 1) {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                     )
                                 }
                                 else {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                     )
                                 }
                             })
@@ -164,12 +164,12 @@ const RestaurantDetail = () => {
                             frequentRestaurants.map((res, index) => {
                                 if (index !== frequentRestaurants.length - 1) {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}, </Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}, </Link>
                                     )
                                 }
                                 else {
                                     return (
-                                        <Link className='text-gray-500 hover:text-gray-900'>{res}</Link>
+                                        <Link key={index} className='text-gray-500 hover:text-gray-900'>{res}</Link>
                                     )
                                 }
                             })

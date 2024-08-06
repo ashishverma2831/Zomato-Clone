@@ -53,9 +53,9 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     <div className='flex flex-col gap-2'>
                         <p className='text-2xl text-gray-700'>Cuisines</p>
                         <div className='flex gap-2 flex-wrap'>
-                            {cuisines.map((cuisine) => {
+                            {cuisines.map((cuisine,index) => {
                                 return (
-                                    <p className='px-4 py-1.5 rounded-full cursor-pointer text-teal-500 shadow border'>{cuisine}</p>
+                                    <p key={index} className='px-4 py-1.5 rounded-full cursor-pointer text-teal-500 shadow border'>{cuisine}</p>
                                 )
                             })}
                         </div>
@@ -76,9 +76,9 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     <div className="flex flex-col">
                         <p className='text-2xl text-gray-700'>More Info</p>
                         <div className="grid grid-cols-2 py-1">
-                            {moreInfo.map((info) => {
+                            {moreInfo.map((info,index) => {
                                 return (
-                                    <p className='text-gray-600 text-md my-1 items-center flex gap-2 font-light'><span className=' rounded-full border-2 border-teal-700 w-5 h-5 grid place-content-center'><i className="fa-solid text-[12px] fa-check text-teal-700"></i></span> {info}</p>
+                                    <p key={index} className='text-gray-600 text-md my-1 items-center flex gap-2 font-light'><span className=' rounded-full border-2 border-teal-700 w-5 h-5 grid place-content-center'><i className="fa-solid text-[12px] fa-check text-teal-700"></i></span> {info}</p>
                                 )
                             })}
                         </div>
@@ -164,9 +164,9 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     <div className='border-b-2'>
                         <p className='text-xl text-gray-900'>Review Highlights</p>
                         <div className='flex gap-2 mb-8 my-4 flex-wrap'>
-                            {reviews.map((review) => {
+                            {reviews.map((review,index) => {
                                 return (
-                                    <p className='px-4 py-1.5 rounded-full cursor-pointer text-gray-700 shadow border'>{review}</p>
+                                    <p key={index} className='px-4 py-1.5 rounded-full cursor-pointer text-gray-700 shadow border'>{review}</p>
                                 )
                             })}
                         </div>
@@ -220,8 +220,8 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                             <div>
                                 <div className='flex items-center gap-2 w-1/3 justify-between text-gray-400 font-light'>
                                     <p><i className="mr-1 fa-regular fa-thumbs-up"></i><span>Helpful</span></p>
-                                    <p><i class="mr-1 fa-regular fa-comment"></i><span>Comment</span></p>
-                                    <p><i class="mr-1 fa-solid fa-share"></i><span>Share</span></p>
+                                    <p><i className="mr-1 fa-regular fa-comment"></i><span>Comment</span></p>
+                                    <p><i className="mr-1 fa-solid fa-share"></i><span>Share</span></p>
                                 </div>
                             </div>
                         </div>
