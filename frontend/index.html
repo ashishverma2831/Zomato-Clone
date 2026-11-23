@@ -10,7 +10,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0XGmbKNPQUKDaHV6pY8xV7KTMzO2W5Sk&libraries=places"></script>
+    <script type="module">
+      const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+
+      if (apiKey) {
+        const mapsScript = document.createElement('script')
+        mapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&loading=async`
+        mapsScript.async = true
+        mapsScript.defer = true
+        mapsScript.onerror = () => console.error('Google Maps JavaScript API failed to load.')
+        document.head.appendChild(mapsScript)
+      } else {
+        console.warn('Google Maps API is not configured. Set VITE_GOOGLE_MAPS_API_KEY in frontend/.env.')
+      }
+    </script>
 
   </body>
 </html>
