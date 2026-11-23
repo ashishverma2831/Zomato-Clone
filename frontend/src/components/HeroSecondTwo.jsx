@@ -3,11 +3,11 @@ import React from 'react'
 const HeroSecondTwo = () => {
   return (
     <>
-        <div className="bg-white p-10">
-            <div className='max-w-screen-lg mx-auto p-10'>
-                <p className='text-center font-semibold text-4xl mb-8'>Why should you partner with Zomato?</p>
-                <p className='text-center font-normal text-gray-500 text-xl px-10 my-4'>Zomato enables you to get 60% more revenue, 10x new customers and boost your brand visibility by providing insights to improve your business.</p>
-                <div className='p-5 flex gap-5 mt-10'>
+        <div className="bg-white px-4 py-8 sm:p-10">
+            <div className='max-w-screen-lg mx-auto p-2 sm:p-6 md:p-10'>
+                <p className='text-center font-semibold text-3xl sm:text-4xl mb-8'>Why should you partner with Zomato?</p>
+                <p className='text-center font-normal text-gray-500 text-base sm:text-xl sm:px-6 md:px-10 my-4'>Zomato enables you to get 60% more revenue, 10x new customers and boost your brand visibility by providing insights to improve your business.</p>
+                <div className='p-2 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mt-8 md:mt-10'>
                     <div className='flex-1 flex justify-center items-center shadow-xl py-6 rounded-lg'>
                         <i className="fa-solid fa-earth-asia text-4xl text-blue-500 w-1/4"></i>
                         <div>

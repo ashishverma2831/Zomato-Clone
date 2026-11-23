@@ -5,9 +5,9 @@ const Footer = () => {
     <>
         <footer>
             <div className='max-w-6xl mx-auto px-5'>
-                <div className='py-10 flex justify-between'>
+                <div className='py-8 sm:py-10 flex flex-col gap-5 sm:flex-row sm:justify-between sm:items-center'>
                     <div><p className='font-bold  uppercase text-4xl italic'>Zomato</p></div>
-                    <div className='flex gap-4'>
+                    <div className='flex flex-wrap gap-3'>
                         {/* buttons */}
                         <div>
   <button
@@ -80,7 +80,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='border-b'>
-                    <div className='flex flex-wrap justify-between mb-10 md:flex-row'>
+                    <div className='grid grid-cols-2 gap-x-4 gap-y-8 mb-10 sm:grid-cols-3 lg:grid-cols-5'>
                         <div >
                             <h3 className='uppercase tracking-widest my-2 font-semibold'>About zomato</h3>
                             <ul className='text-gray-500 text-normal'>
@@ -127,7 +127,7 @@ const Footer = () => {
                                 <li className='hover:text-black'>Sitemap</li>
                             </ul>
                         </div>
-                        <div className='flex flex-col'>
+                        <div className='flex min-w-0 flex-col col-span-2 sm:col-span-1'>
                             <h3 className='uppercase tracking-widest my-2 font-semibold'>social links</h3>
                             <ul className='flex gap-2'>
                                 <li className=' flex justify-center items-center bg-black rounded-full w-8 h-8'><i className="text-white fa-brands fa-linkedin"></i></li>
@@ -138,8 +138,8 @@ const Footer = () => {
                             </ul>
                             <div className='flex flex-col'>
                                 {/* buttons */}
-                                <button className='mb-4 mt-[-30px] h-10'><img width={150} src="/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
-                                <button className='h-10'><img width={150} src="/google-play-badge-logo-svgrepo-com.svg" /></button>
+                                <button className='mb-2 mt-2 h-10'><img className='w-[150px] max-w-full' src="/download-on-the-app-store-apple-logo-svgrepo-com.svg" /></button>
+                                <button className='h-10'><img className='w-[150px] max-w-full' src="/google-play-badge-logo-svgrepo-com.svg" /></button>
                             </div>
                         </div>
                     </div>

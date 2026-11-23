@@ -16,11 +16,11 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
 
     return (
         <>
-            <div className='flex justify-between gap-4'>
-                <div className='flex-1 flex flex-col gap-8'>
+            <div className='flex flex-col lg:flex-row justify-between gap-6 lg:gap-8'>
+                <div className='min-w-0 flex-1 flex flex-col gap-8'>
                     <div>
                         <p className='text-2xl font-semibold'>About this place</p>
-                        <div className='flex gap-4 my-4'>
+                        <div className='flex flex-wrap gap-3 sm:gap-4 my-4'>
                             <div style={{ boxShadow: '0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11)' }} className='bg-white rounded-xl cursor-pointer  flex p-2 justify-between items-center gap-2'>
                                 <img className='w-12' src='https://b.zmtcdn.com/data/o2_assets/ebd42529c3342bdaf8b624a63a571fcc1585754330.png' />
                                 <div className='flex flex-col'>
@@ -42,8 +42,8 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                             <p className="text-2xl  text-gray-700">Menu</p>
                             <p className='flex justify-between '><Link className='text-red-500 text-[16px]'>See all menus <i className="text-[14px] mx-2 fa-solid fa-play"></i></Link></p>
                         </div>
-                        <div className='overflow-hidden w-fit my-2'>
-                            <img className='rounded-xl shadow-lg hover:scale-110 transition-all duration-1000' src='https://b.zmtcdn.com/data/menus/733/18614733/2f28e9a9f3ac0390859dfa253e912235.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A' />
+                        <div className='overflow-hidden w-fit max-w-full my-2'>
+                            <img className='max-w-full rounded-xl shadow-lg hover:scale-110 transition-all duration-1000' src='https://b.zmtcdn.com/data/menus/733/18614733/2f28e9a9f3ac0390859dfa253e912235.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A' />
                         </div>
                         <div className='my-2'>
                             <p>Menu</p>
@@ -75,7 +75,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     </div>
                     <div className="flex flex-col">
                         <p className='text-2xl text-gray-700'>More Info</p>
-                        <div className="grid grid-cols-2 py-1">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 py-1">
                             {moreInfo.map((info,index) => {
                                 return (
                                     <p key={index} className='text-gray-600 text-md my-1 items-center flex gap-2 font-light'><span className=' rounded-full border-2 border-teal-700 w-5 h-5 grid place-content-center'><i className="fa-solid text-[12px] fa-check text-teal-700"></i></span> {info}</p>
@@ -86,7 +86,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     <div>
                         <p style={{ wordSpacing: '4px', letterSpacing: '4px' }} className='uppercase text-lg word tracking-wider text-gray-500'>Our Sponsors</p>
                         <div className='flex flex-wrap mt-2'>
-                            <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
+                            <Link className='w-full sm:w-[calc(50%-0.5rem)] max-w-[300px] min-w-0 cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
                                     <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
@@ -103,7 +103,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                                     <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
-                            <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
+                            <Link className='w-full sm:w-[calc(50%-0.5rem)] max-w-[300px] min-w-0 cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
                                     <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
@@ -125,7 +125,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                     <div>
                         <p className='text-xl text-gray-900'>Similiar restaurants</p>
                         <div className='flex flex-wrap mt-2'>
-                            <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
+                            <Link className='w-full sm:w-[calc(50%-0.5rem)] max-w-[300px] min-w-0 cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
                                     <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
@@ -142,7 +142,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                                     <p className='text-gray-500 truncate'>North Indian, Chinese, Fast Food, Mughlai,Beverages </p>
                                 </div>
                             </Link>
-                            <Link className='w-[300px] cursor-pointer bg-transparent p-2 '>
+                            <Link className='w-full sm:w-[calc(50%-0.5rem)] max-w-[300px] min-w-0 cursor-pointer bg-transparent p-2 '>
                                 <img className='w-full rounded-xl' src='https://b.zmtcdn.com/data/pictures/3/18972533/ecfa428872197028747732c7e0f4ebd0_featured_v2.jpg' alt='restaurant' />
                                 <div className='flex flex-col py-2'>
                                     <p className=' truncate text-lg font-semibold'>Mahavir Bhojnalaya And Baati Chokha</p>
@@ -218,7 +218,7 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                                 <p className='text-gray-400 font-light text-lg'>5 Votes for helpful, 1 Comment</p>
                             </div>
                             <div>
-                                <div className='flex items-center gap-2 w-1/3 justify-between text-gray-400 font-light'>
+                                <div className='flex flex-wrap items-center gap-2 sm:w-1/2 lg:w-1/3 justify-between text-gray-400 font-light'>
                                     <p><i className="mr-1 fa-regular fa-thumbs-up"></i><span>Helpful</span></p>
                                     <p><i className="mr-1 fa-regular fa-comment"></i><span>Comment</span></p>
                                     <p><i className="mr-1 fa-solid fa-share"></i><span>Share</span></p>
@@ -235,13 +235,13 @@ const Overview = ({handleTabs,activeTab,setActiveTab}) => {
                         <p className='flex justify-between '><Link className='text-red-500 text-[16px]'>Report now <i className="text-[14px] mx-2 fa-solid fa-play"></i></Link></p>
                     </div>
                 </div>
-                <div className='w-[340px] h-full sticky top-10' >
-                    <img src='https://b.zmtcdn.com/data/o2_assets/28c43f9f8429ea034ffad3782e6b846f1716307842.png' />
+                <div className='w-full lg:w-[340px] lg:flex-none h-full lg:sticky lg:top-10' >
+                    <img className='w-full max-w-full' src='https://b.zmtcdn.com/data/o2_assets/28c43f9f8429ea034ffad3782e6b846f1716307842.png' />
                     <div className='p-3 mt-4 flex flex-col gap-1 bg-white rounded-xl shadow-2xl'>
                         <p className='text-xl'>Call</p>
                         <p className='text-red-500'>+91 7991578618</p>
                         <p className='text-xl mt-2'>Direction</p>
-                        <img src='https://maps.zomato.com/php/staticmap?center=26.8636628703,81.0083864629&maptype=zomato&markers=26.8636628703,81.0083864629,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250' />
+                        <img className='w-full' src='https://maps.zomato.com/php/staticmap?center=26.8636628703,81.0083864629&maptype=zomato&markers=26.8636628703,81.0083864629,pin_res32&sensor=false&scale=2&zoom=16&language=en&size=240x150&size=400x240&size=650x250' />
                         <p>TCG 7/7, Hilton Garden Inn, Vibhuti Khand, Gomti Nagar, Lucknow</p>
                         <div className='flex justify-start gap-4 py-2'>
                             <Link className='text-gray-400 hover:bg-gray-50 font-normal border-[1.4px] border-gray-500 hover:shadow px-2 py-1 rounded-lg'><i className="text-red-500 mr-2 fa-regular fa-copy"></i> Copy</Link>

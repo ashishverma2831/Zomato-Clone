@@ -1,14 +1,14 @@
-import React from 'react'
+import toast from 'react-hot-toast'
 
 export const SignUp = ({func, closeFunc}) => {
     return (
         <div
             tabIndex={-1}
             aria-hidden="true"
-            className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-black bg-opacity-50"
+            className="fixed inset-0 z-50 flex items-center justify-center w-full h-screen overflow-y-auto bg-black bg-opacity-50 p-3 sm:p-4"
         >
-            <div className="relative p-4 w-full max-w-md max-h-full">
-                <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div className="relative my-auto w-full max-w-md max-h-full">
+                <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
                     <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
                         <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
                             Sign up
@@ -38,7 +38,13 @@ export const SignUp = ({func, closeFunc}) => {
                         </button>
                     </div>
                     <div className="p-4 md:p-5">
-                        <form className="space-y-4" action="#">
+                        <form
+                            className="space-y-4"
+                            onSubmit={(event) => {
+                                event.preventDefault()
+                                toast.error('Account creation is not connected yet.')
+                            }}
+                        >
                             <div>
                                 <input
                                     type="text"
@@ -75,7 +81,7 @@ export const SignUp = ({func, closeFunc}) => {
                                         htmlFor="remember"
                                         className="ms-2 text-sm font-normal text-gray-600 dark:text-gray-300"
                                     >
-                                        I agree to Zomato's <span><a href="#" className='text-red-500 font-medium'>Terms of Service</a></span>,<span><a href="#" className='text-red-500 font-medium'> Privacy Policy</a></span> and <span><a href="#" className='text-red-500 font-medium'>Content Policies</a></span>
+                                        I agree to Zomato&apos;s <span><a href="#" className='text-red-500 font-medium'>Terms of Service</a></span>,<span><a href="#" className='text-red-500 font-medium'> Privacy Policy</a></span> and <span><a href="#" className='text-red-500 font-medium'>Content Policies</a></span>
                                     </label>
                                 </div>
                             </div>
@@ -96,7 +102,7 @@ export const SignUp = ({func, closeFunc}) => {
                                 <img width={40} className='mx-2' src='/7123025_logo_google_g_icon.svg' />
                                 Continue with Google
                             </button>
-                            <div className="text-xl font-normal text-gray-500 dark:text-gray-300">
+                            <div className="text-base sm:text-lg font-normal text-gray-500 dark:text-gray-300">
                                 Already have an account?{" "}
                                 <a
                                     href="#"

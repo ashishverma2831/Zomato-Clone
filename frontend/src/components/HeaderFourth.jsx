@@ -13,7 +13,7 @@ const HeaderFourth = ({city,town}) => {
         <>
             <header>
                 {
-                    sidebar ? (<div className='fixed top-0 left-0 z-40 h-screen p-5 md:z-[-1] block md:hidden w-full bg-white'>
+                    sidebar ? (<div className='fixed inset-0 z-40 h-screen overflow-y-auto p-5 md:z-[-1] block md:hidden w-full bg-white'>
                         <div className='flex justify-between items-center mb-10'>
                             <p className='text-4xl font-normal cursor-pointer' onClick={() => { setSidebar(!sidebar) }}>
                                 <span className=''>
@@ -23,7 +23,7 @@ const HeaderFourth = ({city,town}) => {
                             </p>
                             <p className='text-4xl bold italic font-extrabold'>Zomato</p>
                         </div>
-                        <div className='flex flex-col w-[200px] gap-4'>
+                        <div className='flex flex-col w-full max-w-sm gap-4'>
                             <button
                                 className="w-full text-left p-2 text-gray-500 hover:text-gray-800 text-lg"
                                 type="button"
@@ -53,8 +53,8 @@ const HeaderFourth = ({city,town}) => {
                         </div>
                     </div>) : (null)
                 }
-                <div className='max-w-screen-lg gap-4 mx-auto justify-between items-center flex '>
-                    <div className='flex flex-1 gap-4 justify-between items-center p-5 md:py-0'>
+                <div className='max-w-screen-lg gap-2 sm:gap-4 mx-auto justify-between items-center flex px-3 sm:px-4'>
+                    <div className='flex min-w-0 flex-1 gap-2 sm:gap-4 justify-between items-center py-4 md:py-0'>
                         <div className='block md:hidden cursor-pointer' onClick={() => { setSidebar(!sidebar) }}>
                             <div className='flex flex-col gap-1'>
                                 <p className='w-6 h-[3px] rounded bg-slate-800'>  </p>
@@ -62,8 +62,8 @@ const HeaderFourth = ({city,town}) => {
                                 <p className='w-6 h-[3px] rounded bg-slate-800'>  </p>
                             </div>
                         </div>
-                        <Link to={city===undefined || town===undefined ?'/':'/'+city+'/'+town} className='text-4xl bold italic font-extrabold'>Zomato</Link>
-                        <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className='w-full hidden md:block shadow-lg py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border border-gray-200 focus:outline-none outline-none rounded-lg' />
+                        <Link to={city===undefined || town===undefined ?'/':'/'+city+'/'+town} className='shrink-0 text-3xl sm:text-4xl bold italic font-extrabold'>Zomato</Link>
+                        <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className='w-full min-w-0 hidden md:block shadow-lg py-3 px-4 text-base lg:text-xl my-4 font-normal placeholder-gray-500 border border-gray-200 focus:outline-none outline-none rounded-lg' />
                     </div>
                     <div className='hidden md:block'>
                         <div className='flex w-[200px] justify-between items-center px-5 gap-4'>

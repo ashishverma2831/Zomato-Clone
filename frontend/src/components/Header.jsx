@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-[572px] bg-no-repeat bg-center bg-cover'>
+      <header className='bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-[520px] sm:h-[572px] bg-no-repeat bg-center bg-cover'>
         <nav className=" border-gray-200 ">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -91,7 +91,7 @@ const Header = () => {
             </div>
             <div
               id="drawer-navigation"
-              className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 "
+              className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-72 max-w-[85vw] "
               tabIndex={-1}
               aria-labelledby="drawer-navigation-label"
             >
@@ -176,8 +176,8 @@ const Header = () => {
 
         <div className='h-full flex justify-center items-center'>
           <div className=' w-full  md:max-w-xl mx-auto p-5 mb-10'>
-            <h1 className='text-white text-7xl italic font-bold text-center my-4'>Zomato</h1>
-            <p className='text-white text-4xl font-normal text-center my-4'>Find the best restaurants, cafés and bars in India</p>
+            <h1 className='text-white text-5xl sm:text-6xl md:text-7xl italic font-bold text-center my-4'>Zomato</h1>
+            <p className='text-white text-2xl sm:text-3xl md:text-4xl font-normal text-center my-4'>Find the best restaurants, cafés and bars in India</p>
           </div>
         </div>
       </header>

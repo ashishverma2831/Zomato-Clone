@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const HeaderSecond = () => {
   return (
     <>
-        <header className='bg-[url("https://b.zmtcdn.com/mx-onboarding-hero87f77501659a5656cad54d98e72bf0d81627911821.webp")] h-[456px] bg-no-repeat bg-center bg-cover'>
+        <header className='bg-[url("https://b.zmtcdn.com/mx-onboarding-hero87f77501659a5656cad54d98e72bf0d81627911821.webp")] min-h-[456px] py-3 md:py-0 bg-no-repeat bg-center bg-cover'>
             <nav className=" border-gray-200 ">
                 <div className="max-w-screen-lg flex items-center justify-between mx-auto p-4">
                     <NavLink className='text-white md:block hidden'>
@@ -38,10 +38,10 @@ const HeaderSecond = () => {
     id="authentication-modal"
     tabIndex={-1}
     aria-hidden="true"
-    className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    className="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 justify-center items-center w-full h-full max-h-full p-3 sm:p-4"
   >
     <div className="relative p-4 w-full max-w-md max-h-full">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
         <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
           <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
             Login
@@ -128,10 +128,10 @@ const HeaderSecond = () => {
     id="authentication-modal-1"
     tabIndex={-1}
     aria-hidden="true"
-    className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    className="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 justify-center items-center w-full h-full max-h-full p-3 sm:p-4"
   >
     <div className="relative p-4 w-full max-w-md max-h-full">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
         <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
           <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
             Sign up
@@ -321,10 +321,10 @@ const HeaderSecond = () => {
     id="authentication-modal"
     tabIndex={-1}
     aria-hidden="true"
-    className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    className="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 justify-center items-center w-full h-full max-h-full p-3 sm:p-4"
   >
     <div className="relative p-4 w-full max-w-md max-h-full">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
         <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
           <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
             Login
@@ -411,10 +411,10 @@ const HeaderSecond = () => {
     id="authentication-modal-1"
     tabIndex={-1}
     aria-hidden="true"
-    className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    className="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 justify-center items-center w-full h-full max-h-full p-3 sm:p-4"
   >
     <div className="relative p-4 w-full max-w-md max-h-full">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
         <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
           <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
             Sign up
@@ -529,15 +529,15 @@ const HeaderSecond = () => {
 
 
             <div className='flex justify-center flex-col'>
-                <div className=' w-full md:max-w-3xl mx-auto px-5 shadow'>
-                    <p className='text-white text-4xl font-medium my-4'>Partner with Zomato <br />
+                <div className='w-full md:max-w-3xl mx-auto px-5 shadow'>
+                    <p className='text-white text-3xl sm:text-4xl font-medium my-4'>Partner with Zomato <br />
                         at 0% commission for the 1st month!</p>
-                    <p className='text-white text-xl font-normal my-4'>And get ads worth INR 1500. Valid for new restaurant partners in select cities.</p>
-                    <div className='flex'>
-                    <button type="button" className="text-white flex-1 bg-blue-700 hover:bg-blue-800 focus:outline-none font-normal tracking-wide rounded-lg text-lg  px-5 py-3 text-center me-2 ">
+                    <p className='text-white text-base sm:text-xl font-normal my-4'>And get ads worth INR 1500. Valid for new restaurant partners in select cities.</p>
+                    <div className='flex flex-col sm:flex-row gap-3'>
+                    <button type="button" className="text-white flex-1 bg-blue-700 hover:bg-blue-800 focus:outline-none font-normal tracking-wide rounded-lg text-base sm:text-lg px-4 sm:px-5 py-3 text-center">
   Register your restaurant
 </button>
-<button type="button" className="  focus:outline-none flex-1 bg-white  font-normal rounded-lg text-lg tracking px-5 py-3 text-center me-2 ">
+<button type="button" className="focus:outline-none flex-1 bg-white font-normal rounded-lg text-base sm:text-lg tracking px-4 sm:px-5 py-3 text-center">
   Login to view your existing restaurants
 </button>
                     </div>

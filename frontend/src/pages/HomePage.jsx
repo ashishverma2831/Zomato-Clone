@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 // import Header from '../components/Header';
 import { Link, useParams } from 'react-router-dom';
 import HeaderThird from '../components/HeaderThird';
-import Carousel from 'react-multi-carousel';
 import ExploreAccordion from '../components/ExploreAccordion';
 import CollectionComponent from '../components/CollectionComponent';
 
@@ -127,17 +126,17 @@ const HomePage = () => {
     <>
       <HeaderThird city={city} />
 
-      <Section className='max-w-screen-xl mx-auto p-10'>
+      <Section className='max-w-screen-xl mx-auto flex p-4 sm:p-6 md:p-10'>
         <HomeCard cardData={cardData} city={city} />
       </Section>
 
       <CollectionComponent city={city} />
 
       <section className='py-10'>
-        <div className='max-w-screen-xl mx-auto p-10'>
-          <p className='text-4xl mb-10'>Popular localites in and around <span className='font-semibold capitalize'>{city}</span>  </p>
+        <div className='max-w-screen-xl mx-auto px-4 py-8 sm:px-6 md:p-10'>
+          <p className='text-2xl mb-6 md:text-4xl md:mb-10'>Popular localites in and around <span className='font-semibold capitalize'>{city}</span>  </p>
           <div>
-            <div className=' grid grid-cols-3 gap-6 gap-y-8'>
+            <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-6 lg:gap-y-8'>
               {
                 cityTowns.map((cityTown, index) => {
                   if (index !== cityTowns.length - 1 && index < 8) {
@@ -211,12 +210,12 @@ const HomePage = () => {
       </section>
 
       <section className='my-10 bg-[#FFFBF7] '>
-        <div className='py-10 max-w-screen-md w-30 mx-auto flex sm:flex-row flex-col items-center px-5 gap-4 sm:items-end '>
-          <img alt='image' className=' w-[250px] h-[250px]' src='https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png' />
-          <div className='flex px-5 flex-col gap-4 min-w-[400px]'>
-            <p className='text-5xl '>Get the Zomato app</p>
+        <div className='mx-auto flex max-w-screen-md flex-col items-center gap-4 px-4 py-8 sm:px-6 md:flex-row md:items-end md:py-10'>
+          <img alt='image' className='h-40 w-40 shrink-0 object-contain sm:h-52 sm:w-52 md:h-[250px] md:w-[250px]' src='https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png' />
+          <div className='flex w-full min-w-0 flex-col gap-4 px-1 sm:px-5'>
+            <p className='text-3xl sm:text-4xl md:text-5xl'>Get the Zomato app</p>
             <p className='text-lg font-light'>We will send you a link, open it on your phone to download the app</p>
-            <div className=' flex items-center justify-start gap-12'>
+            <div className='flex items-center justify-start gap-8 sm:gap-12'>
               <div className='flex items-center gap-2'>
                 <input type='radio' value='email' onChange={() => setActiveRadio('email')} id='Email' className='text-red-500' name='radio-input' />
                 <label>Email</label>
@@ -226,17 +225,17 @@ const HomePage = () => {
                 <label>Phone</label>
               </div>
             </div>
-            <div className='flex gap-2 justify-evenly'>
+            <div className='flex flex-col gap-2 sm:flex-row sm:justify-evenly'>
               {/* <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Email' /> */}
               {/* <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400'  placeholder='Phone' /> */}
 
               {
-                activeRadio === 'email' ? <input type='email' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400' placeholder='Email' /> : <input type='number' className='flex-1 rounded outline-none border border-gray-300 p-2.5 placeholder:text-gray-400' placeholder='Phone' />
+                activeRadio === 'email' ? <input type='email' className='min-w-0 flex-1 rounded border border-gray-300 p-2.5 outline-none placeholder:text-gray-400' placeholder='Email' /> : <input type='number' className='min-w-0 flex-1 rounded border border-gray-300 p-2.5 outline-none placeholder:text-gray-400' placeholder='Phone' />
               }
-              <button className='bg-[#EF4F5F] rounded-md hover:bg-red-700 text-white px-6'>Share App Link</button>
+              <button className='rounded-md bg-[#EF4F5F] px-4 py-2 text-white hover:bg-red-700 sm:px-6'>Share App Link</button>
             </div>
             <p className='text-[#9C9C9C]'>Download app from</p>
-            <div className='flex gap-4'>
+            <div className='flex flex-wrap gap-3'>
               <img alt='image' className='w-[120px] h-[40px]' src='https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png' />
               <img alt='image' className='w-[120px] h-[40px]' src='https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png' />
             </div>

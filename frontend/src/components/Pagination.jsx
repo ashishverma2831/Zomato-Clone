@@ -41,15 +41,15 @@ const Pagination = ({ imagelist, imagePerPage }) => {
     return (
         <>
             <section>
-                <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 py-5 justify-center gap-2'>
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 py-5 justify-center gap-2 sm:gap-3'>
                     {
                         displayedItems.map((data, index) => {
-                            return <div key={index} className='rounded cursor-pointer overflow-hidden transition-all duration-1000'><div className={`min-w-[200px] min-h-[200px] flex-1 transition-all duration-1000 bg-center bg-cover hover:scale-110 bg-no-repeat rounded bg-[url(${data.image})]`} /></div>
+                            return <div key={index} className='min-w-0 aspect-square rounded cursor-pointer overflow-hidden transition-all duration-1000'><div className={`h-full w-full transition-all duration-1000 bg-center bg-cover hover:scale-110 bg-no-repeat rounded bg-[url(${data.image})]`} /></div>
                         })
                     }
                 </div>
-                <div className=' flex justify-between p-4 items-center'>
-                    <p>Showing {startIndex+1}-{endIndex} of {imagelist.length} images</p>
+                <div className='flex flex-wrap justify-between gap-3 p-4 items-center'>
+                    <p className='text-sm sm:text-base'>Showing {startIndex+1}-{Math.min(endIndex, imagelist.length)} of {imagelist.length} images</p>
                     <div className='flex justify-center gap-2 text-center'>
                         <button onClick={() => { handlePageClick(paginationState.currentPage - 1) }} disabled={paginationState.currentPage === 1} className='h-10 w-10 bg-slate-200 font-bold shadow-lg hover:bg-slate-400/50 rounded-full'> {'<'} </button>
                         <button onClick={() => { handlePageClick(paginationState.currentPage + 1) }} disabled={endIndex >= data.length} className='h-10 w-10 bg-slate-200 font-bold shadow-lg hover:bg-slate-400/50 rounded-full'> {'>'} </button>

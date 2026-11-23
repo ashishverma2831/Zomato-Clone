@@ -13,8 +13,8 @@ const ExploreAccordion = () => {
     return (
         <>
             <section className='py-10 text-center'>
-                <p className='text-4xl mx-auto max-w-screen-xl px-12 text-left '>Explore options near me</p>
-                <div className='max-w-screen-xl px-10 text-center mx-auto my-10'>
+                <p className='text-3xl sm:text-4xl mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-12 text-left '>Explore options near me</p>
+                <div className='max-w-screen-xl px-4 sm:px-6 lg:px-10 text-center mx-auto my-8 sm:my-10'>
 
                     <div
                         id="accordion-flush"
@@ -27,7 +27,7 @@ const ExploreAccordion = () => {
                             <button
                                 onClick={() => { setAccordion({ key: 1, hidden: !accordion.hidden }) }}
                                 type="button"
-                                className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                                className="flex px-4 sm:px-7 border rounded-lg items-center justify-between w-full py-4 sm:py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3 text-left"
                                 data-accordion-target="#accordion-flush-body-1"
                                 aria-expanded="true"
                                 aria-controls="accordion-flush-body-1"
@@ -83,7 +83,7 @@ const ExploreAccordion = () => {
                             <button
                                 onClick={() => { setAccordion({ key: 2, hidden: !accordion.hidden }) }}
                                 type="button"
-                                className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                                className="flex px-4 sm:px-7 border rounded-lg items-center justify-between w-full py-4 sm:py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3 text-left"
                                 data-accordion-target="#accordion-flush-body-2"
                                 aria-expanded="true"
                                 aria-controls="accordion-flush-body-2"
@@ -139,7 +139,7 @@ const ExploreAccordion = () => {
                             <button
                                 onClick={() => { setAccordion({ key: 3, hidden: !accordion.hidden }) }}
                                 type="button"
-                                className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                                className="flex px-4 sm:px-7 border rounded-lg items-center justify-between w-full py-4 sm:py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3 text-left"
                                 data-accordion-target="#accordion-flush-body-3"
                                 aria-expanded="true"
                                 aria-controls="accordion-flush-body-3"
@@ -186,7 +186,7 @@ const ExploreAccordion = () => {
                             <button
                                 onClick={() => { setAccordion({ key: 4, hidden: !accordion.hidden }) }}
                                 type="button"
-                                className="flex px-7 border rounded-lg items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+                                className="flex px-4 sm:px-7 border rounded-lg items-center justify-between w-full py-4 sm:py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3 text-left"
                                 data-accordion-target="#accordion-flush-body-4"
                                 aria-expanded="true"
                                 aria-controls="accordion-flush-body-4"

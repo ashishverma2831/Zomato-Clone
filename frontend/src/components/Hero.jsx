@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from './ui/button'
 
 const Hero = () => {
 
@@ -93,18 +93,30 @@ const Hero = () => {
 
   return (
     <>
-      <div className=' container max-w-6xl mx-auto p-5'>
-        <p className="justify-center text-4xl font-normal tracking-wide my-5 flex">Popular locations in <span className='flex uppercase font-semibold'><img className='mx-4' width={50} src='/india-flag-icon.svg' /> India</span> </p>
-        <p className='text-2xl max-w-4xl mx-auto text-center text-gray-500 font-light py-5 '>From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.</p>
-        <div className=' grid grid-cols-3 gap-6 gap-y-8'>
+      <div className='container mx-auto max-w-6xl px-5 py-14 md:py-20'>
+        <div className='mx-auto mb-10 max-w-3xl text-center md:mb-14'>
+          <p className="mb-4 flex flex-wrap items-center justify-center gap-2 text-3xl font-normal tracking-tight md:text-4xl">
+            Popular locations in
+            <span className='inline-flex items-center gap-2 font-semibold uppercase'>
+              <img className='h-8 w-8' alt='India flag' src='/india-flag-icon.svg' /> India
+            </span>
+          </p>
+          <p className='mx-auto max-w-3xl text-base leading-7 text-muted-foreground md:text-lg'>
+            From swanky restaurants to cosy neighbourhood gems, discover menus, photos, and reviews to find your next great meal.
+          </p>
+          <Button asChild variant="outline" className="mt-6">
+            <a href="#popular-locations">Explore cities <span aria-hidden="true" className="ml-2">↓</span></a>
+          </Button>
+        </div>
+        <div id="popular-locations" className='grid scroll-mt-8 grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3'>
           {
             cities.map((city) => {
               return (
                 <div key={city}>
-                  <Link to={'/' + city.toLowerCase()} className="flex border items-center justify-between p-5 text-base font-medium text-black rounded-lg bg-gray-50 shadow-md hover:shadow-xl">
-                    <span className="w-full text-xl font-normal text-black">{city} Restaurants</span>
+                  <Link to={'/' + city.toLowerCase()} className="group flex min-h-16 items-center justify-between rounded-xl border border-border/80 bg-card px-5 py-4 text-base font-medium text-card-foreground shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md focus-visible:ring-2 focus-visible:ring-ring">
+                    <span className="text-base font-medium">{city} Restaurants</span>
                     <svg
-                      className="w-4 h-4 ms-2 rtl:rotate-180"
+                      className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

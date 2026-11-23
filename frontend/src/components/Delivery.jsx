@@ -1,7 +1,13 @@
 import React from 'react'
 import RestaurantCard from './RestaurantCard'
 import FilterButton from './FilterButton'
-import Carousel from 'react-multi-carousel'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from './ui/carousel'
 
 const Delivery = ({city,town}) => {
 
@@ -99,7 +105,7 @@ const Delivery = ({city,town}) => {
     <>
 
       <section className='border-t'>
-        <div className='bg-white max-w-screen-xl flex flex-wrap gap-4 px-10 mx-auto p-6'>
+        <div className='bg-white max-w-screen-xl flex flex-wrap gap-2 sm:gap-4 px-4 sm:px-6 lg:px-10 mx-auto py-4 sm:p-6'>
           {
             filters.map((filter, index) => (
               <FilterButton key={index} text={filter} />
@@ -108,136 +114,50 @@ const Delivery = ({city,town}) => {
         </div>
       </section>
 
-      <section className='bg-gray-100 py-6 px-8'>
-        <div className='max-w-screen-xl bg-blue px-10 mx-auto '>
-          <p className='text-4xl mb-4 font-normal'>Inspiration for your first order</p>
-          <Carousel
-            className=' bg-gray-100'
-            autoPlay={false}
-            autoPlaySpeed={4000}
-            containerClass="container-with-dots"
-            dotListClass="react-multi-carousel-dot-list"
-            draggable={true}
-            infinite={false}
-            renderButtonGroupOutside={true}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024
-                },
-                items: 6,
-                partialVisibilityGutter: 40
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 512
-                },
-                items: 4,
-                partialVisibilityGutter: 30
-              },
-              mobile: {
-                breakpoint: {
-                  max: 512,
-                  min: 0
-                },
-                items: 2,
-                partialVisibilityGutter: 30
-              }
-            }}
-            customLeftArrow={<button className='hover:bg-gray-100 border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute w-8 left-0 -translate-x-1 bg-white h-8 mx-1 rounded-full'>{'<'}</button>}
-            customRightArrow={<button className='hover:bg-gray-100  border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute right-0 translate-x-1 bg-white w-8 h-8 mx-1 rounded-full'>{'>'}</button>}
-            customDot={<button className='bg-gray-400/50 w-2 h-2 mx-1 my-5 rounded-full'></button>}
-            rewind={false}
-            rewindWithAnimation={false}
-            shouldResetAutoplay={true}
-            showDots={false}
-            slidesToSlide={1}
-            swipeable={true}
-          >
-
-            {
-             topFoods.map((card,index)=>{
-              return(
-                <div key={index} className=' flex bg-gray-100 p-5 flex-col gap-2'>
-                  <img className='rounded-full  w-[150px] h-[150px] cursor-pointer' src={card.image} alt='food' />
-                  <p className='text-xl text-center font-normal'>{card.name}</p>
-                </div>
-              )
-             }) 
-            }
+      <section className='bg-gray-100 py-6 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-screen-xl bg-blue px-0 sm:px-4 lg:px-10 mx-auto '>
+          <p className='text-2xl sm:text-3xl md:text-4xl mb-4 font-normal'>Inspiration for your first order</p>
+          <Carousel opts={{ align: 'start', containScroll: 'trimSnaps' }} className='bg-gray-100'>
+            <CarouselContent>
+              {topFoods.map((card) => (
+                <CarouselItem key={card.name} className='basis-1/2 sm:basis-1/4 lg:basis-1/6'>
+                  <div className='flex min-w-0 flex-col items-center gap-2 bg-gray-100 p-2 sm:p-5'>
+                  <img className='rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-[150px] md:h-[150px] object-cover cursor-pointer' src={card.image} alt='food' />
+                  <p className='text-base sm:text-lg md:text-xl text-center font-normal'>{card.name}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </section>
 
-      <section className='bg-white py-6 px-8'>
-        <div className='max-w-screen-xl bg-blue px-10 mx-auto '>
-          <p className='text-4xl mb-4 font-normal'>Top brands for you</p>
-          <Carousel
-            className=''
-            autoPlay={false}
-            autoPlaySpeed={4000}
-            containerClass="container-with-dots"
-            dotListClass="react-multi-carousel-dot-list"
-            draggable={true}
-            infinite={false}
-            renderButtonGroupOutside={true}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024
-                },
-                items: 6,
-                partialVisibilityGutter: 40
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 512
-                },
-                items: 4,
-                partialVisibilityGutter: 30
-              },
-              mobile: {
-                breakpoint: {
-                  max: 512,
-                  min: 0
-                },
-                items: 2,
-                partialVisibilityGutter: 30
-              }
-            }}
-            customLeftArrow={<button className='hover:bg-gray-100 border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute w-8 left-0 -translate-x-1 bg-white h-8 mx-1 rounded-full'>{'<'}</button>}
-            customRightArrow={<button className='hover:bg-gray-100  border border-gray-400 shadow-2xl text-gray-900 font-bold text-xl flex justify-center absolute right-0 translate-x-1 bg-white w-8 h-8 mx-1 rounded-full'>{'>'}</button>}
-            customDot={<button className='bg-gray-400/50 w-2 h-2 mx-1 my-5 rounded-full'></button>}
-            rewind={false}
-            rewindWithAnimation={false}
-            shouldResetAutoplay={true}
-            showDots={false}
-            slidesToSlide={1}
-            swipeable={true}
-          >
-
-            {
-             topBrands.map((card,index)=>{
-              return(
-                <div key={index} className='flex p-5 flex-col items-center gap-1'>
-                  <img className='rounded-full w-[150px] h-[150px] cursor-pointer shadow-xl' src={card.image} alt='food' />
-                  <p className='text-lg text-center font-normal mt-1'>{card.title}</p>
+      <section className='bg-white py-6 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-screen-xl bg-blue px-0 sm:px-4 lg:px-10 mx-auto '>
+          <p className='text-2xl sm:text-3xl md:text-4xl mb-4 font-normal'>Top brands for you</p>
+          <Carousel opts={{ align: 'start', containScroll: 'trimSnaps' }}>
+            <CarouselContent>
+              {topBrands.map((card) => (
+                <CarouselItem key={card.title} className='basis-1/2 sm:basis-1/4 lg:basis-1/6'>
+                  <div className='flex min-w-0 flex-col items-center gap-1 p-2 sm:p-5'>
+                  <img className='rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-[150px] md:h-[150px] object-cover cursor-pointer shadow-xl' src={card.image} alt='food' />
+                  <p className='text-sm sm:text-base md:text-lg text-center font-normal mt-1'>{card.title}</p>
                   <p className='text-md text-center text-gray-500 font-normal'>26 min</p>
-                </div>
-              )
-             }) 
-            }
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </section>
 
       <section>
-        <div className='py-5 px-10 max-w-screen-xl mx-auto '>
-          <p className='px-2 text-4xl font-normal'>Food Delivery Restaurants in T. Nagar</p>
+        <div className='py-5 px-4 sm:px-6 lg:px-10 max-w-screen-xl mx-auto '>
+          <p className='px-2 text-2xl sm:text-3xl md:text-4xl font-normal'>Food Delivery Restaurants in T. Nagar</p>
           <div className='flex flex-wrap py-5 gap-2 md:gap-6'>
             <RestaurantCard />
             <RestaurantCard />

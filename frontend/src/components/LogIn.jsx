@@ -1,15 +1,15 @@
-import React from 'react'
 import 'flowbite';
+import toast from 'react-hot-toast'
 
 export const LogIn = ({closeFunc, func}) => {
     return (
         <div
             tabIndex={-1}
             aria-hidden="true"
-            className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-screen bg-black bg-opacity-50"
+            className="fixed inset-0 z-50 flex items-center justify-center w-full h-screen overflow-y-auto bg-black bg-opacity-50 p-3 sm:p-4"
         >
-            <div className="relative p-4 w-full max-w-md max-h-full">
-                <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div className="relative my-auto w-full max-w-md max-h-full">
+                <div className="relative max-h-[calc(100vh-1.5rem)] overflow-y-auto bg-white rounded-lg shadow dark:bg-gray-700">
                     <div className="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600">
                         <h3 className="text-3xl font-normal text-gray-700 dark:text-white">
                             Login
@@ -39,7 +39,13 @@ export const LogIn = ({closeFunc, func}) => {
                         </button>
                     </div>
                     <div className="p-4 md:p-5">
-                        <form className="space-y-4 py-2" action="#">
+                        <form
+                            className="space-y-4 py-2"
+                            onSubmit={(event) => {
+                                event.preventDefault()
+                                toast.error('Sign-in is not connected yet.')
+                            }}
+                        >
                             <input type='number' placeholder='Phone' className='placeholder:text-xl w-full rounded-md border-gray-500 border py-2.5 focus:outline-none focus:border-0 focus:border-green-500 ' />
                             <button
                                 type="submit"

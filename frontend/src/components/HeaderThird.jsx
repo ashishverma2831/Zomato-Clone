@@ -14,7 +14,7 @@ const HeaderThird = ({city}) => {
 
     return (
         <>
-            <header className='bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-[420px] bg-no-repeat bg-center bg-cover'>
+            <header className='bg-[url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")] h-[460px] md:h-[420px] bg-no-repeat bg-center bg-cover'>
                 <nav className=" border-gray-200 ">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
                         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -94,7 +94,7 @@ const HeaderThird = ({city}) => {
                         </div>
                         <div
                             id="drawer-navigation"
-                            className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 "
+                            className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-72 max-w-[85vw] "
                             tabIndex={-1}
                             aria-labelledby="drawer-navigation-label"
                         >
@@ -175,9 +175,9 @@ const HeaderThird = ({city}) => {
 
                 <div className=' flex justify-center items-center '>
                     <div className=' w-full  md:max-w-screen-md mx-auto p-5 my-10 '>
-                        <h1 className='text-white text-7xl italic font-bold text-center sm:my-4'>Zomato</h1>
-                        <p className='text-white text-4xl font-normal text-center my-4'>Discover the best food & drinks in <span className='capitalize'>{city}</span> </p>
-                        <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className=' w-full py-3 px-4 text-xl my-4 font-normal placeholder-gray-500 border-0 focus:outline-none focus:border-0  rounded-lg' />
+                        <h1 className='text-white text-5xl sm:text-6xl md:text-7xl italic font-bold text-center sm:my-4'>Zomato</h1>
+                        <p className='text-white text-2xl sm:text-3xl md:text-4xl font-normal text-center my-4'>Discover the best food & drinks in <span className='capitalize'>{city}</span> </p>
+                        <input type='text' autoFocus={true} placeholder='Search for restaurant, cuisine or a dish' className='w-full min-w-0 py-3 px-4 text-base sm:text-lg md:text-xl my-4 font-normal placeholder-gray-500 border-0 focus:outline-none focus:border-0 rounded-lg' />
                         {/* <LocationSearchInput /> */}
                     </div>
                 </div>
